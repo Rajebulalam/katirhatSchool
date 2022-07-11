@@ -1,4 +1,5 @@
 import React from 'react';
+import MainHeader from './MainHeader';
 import MiddleHeader from './MiddleHeader';
 import TopHeader from './TopHeader';
 
@@ -7,6 +8,7 @@ const Header = () => {
         <div>
             <TopHeader></TopHeader>
             <MiddleHeader></MiddleHeader>
+            <MainHeader></MainHeader>
         </div>
     );
 };
