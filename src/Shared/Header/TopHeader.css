@@ -1,0 +1,23 @@
+.top{
+    position: relative;
+}
+.top li:first-child ::after{
+    position: absolute;
+    content: '';
+    right: 49%;
+    top: 6px;
+    width: 2px;
+    height: 20px;
+    background-color: #fff;
+    color: #fff;
+}
+.top h2::after{
+    position: absolute;
+    content: '';
+    right: 60%;
+    top: 6px;
+    width: 2px;
+    height: 20px;
+    background-color: #fff;
+    color: #fff;
+}

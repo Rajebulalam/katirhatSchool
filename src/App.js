@@ -1,9 +1,10 @@
 import './App.css';
+import Header from './Shared/Header/Header';
 
 function App() {
   return (
     <div>
-      <h2>Katirhat School</h2>
+      <Header></Header>
     </div>
   );
 }
