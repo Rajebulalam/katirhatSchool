@@ -10,7 +10,7 @@ const Principle = () => {
             <div className='flex items-center justify-center pb-3'>
                 <img className='w-[250px]' src={principle} alt="principle" />
             </div>
-            <h2 className='text-xl font-bold'>Mr.Bill Gates</h2>
+            <h2 className='text-xl font-bold'>Mr.Abdul Kuddus</h2>
             <h3>Principle of Katirhat High School</h3>
             <address>Katirhat, Hathazari, Chattogram</address>
             <Link className='text-secondary text-xl' to='/'>Read Message ...</Link>
