@@ -42,7 +42,7 @@ const images = [
 
 const Banner = () => {
     return (
-        <div className='my-7'>
+        <div className='my-4'>
             <ImageGallery thumbnailPosition={'left'} items={images} />;
         </div>
     );

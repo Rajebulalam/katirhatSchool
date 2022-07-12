@@ -1,0 +1,9 @@
+.principle::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 7px;
+    height: 52px;
+    background-color: #F9A825;
+}
