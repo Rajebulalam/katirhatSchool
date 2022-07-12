@@ -1,5 +1,6 @@
 import React from 'react';
 import Banner from './Banner';
+import Event from './Event';
 import Principle from './Principle';
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
             <div className='w-full flex'>
                 <div className='w-8/12 py-3'>
                     <Banner></Banner>
+                    <Event></Event>
                 </div>
                 <div className='w-4/12 py-3 ml-3'>
                     <Principle></Principle>
