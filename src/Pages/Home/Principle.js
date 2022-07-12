@@ -8,7 +8,7 @@ const Principle = () => {
         <div className='relative'>
             <h2 className='bg-primary p-3 pl-5 my-4 text-white text-lg principle'>Message from Principle</h2>
             <div className='flex items-center justify-center pb-3'>
-                <img className='w-[200px]' src={principle} alt="principle" />
+                <img className='w-[250px]' src={principle} alt="principle" />
             </div>
             <h2 className='text-xl font-bold'>Mr.Bill Gates</h2>
             <h3>Principle of Katirhat High School</h3>
