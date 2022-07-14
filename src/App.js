@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import ChairmanMessage from './Pages/Message/ChairmanMessage';
 import PrincipleMessage from './Pages/Message/PrincipleMessage';
+import VicePrincipleMessage from './Pages/Message/VicePrincipleMessage';
+import TeacherMessage from './Pages/Message/TeacherMessage';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/chairmanMessage' element={<ChairmanMessage></ChairmanMessage>}></Route>
         <Route path='/principleMessage' element={<PrincipleMessage></PrincipleMessage>}></Route>
+        <Route path='/vicePrincipleMessage' element={<VicePrincipleMessage></VicePrincipleMessage>}></Route>
+        <Route path='/teacherMessage' element={<TeacherMessage></TeacherMessage>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

@@ -12,7 +12,7 @@ const TeachersMessage = () => {
             <h2 className='text-xl font-bold'>Mr.Abdul Baset</h2>
             <h3>Teacher of Katirhat High School</h3>
             <address>Katirhat, Hathazari, Chattogram</address>
-            <Link className='text-secondary text-xl' to='/'>Read Message ...</Link>
+            <Link className='text-secondary text-xl' to='/teacherMessage'>Read Message ...</Link>
         </div>
     );
 };

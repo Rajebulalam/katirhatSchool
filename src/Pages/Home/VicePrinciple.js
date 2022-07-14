@@ -12,7 +12,7 @@ const VicePrinciple = () => {
             <h2 className='text-xl font-bold'>Mr.Khondokar Mosharrof</h2>
             <h3>Vice-Principle of Katirhat High School</h3>
             <address>Katirhat, Hathazari, Chattogram</address>
-            <Link className='text-secondary text-xl' to='/'>Read Message ...</Link>
+            <Link className='text-secondary text-xl' to='/vicePrincipleMessage'>Read Message ...</Link>
         </div>
     );
 };
