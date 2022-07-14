@@ -7,6 +7,7 @@ import {
   Route,
 } from "react-router-dom";
 import ChairmanMessage from './Pages/Message/ChairmanMessage';
+import PrincipleMessage from './Pages/Message/PrincipleMessage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/chairmanMessage' element={<ChairmanMessage></ChairmanMessage>}></Route>
+        <Route path='/principleMessage' element={<PrincipleMessage></PrincipleMessage>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

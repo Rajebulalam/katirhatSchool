@@ -13,7 +13,7 @@ const Principle = () => {
             <h2 className='text-xl font-bold'>Mr.Abdul Kuddus</h2>
             <h3>Principle of Katirhat High School</h3>
             <address>Katirhat, Hathazari, Chattogram</address>
-            <Link className='text-secondary text-xl' to='/'>Read Message ...</Link>
+            <Link className='text-secondary text-xl' to='/principleMessage'>Read Message ...</Link>
         </div >
     );
 };
