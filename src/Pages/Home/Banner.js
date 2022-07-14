@@ -47,7 +47,7 @@ const Banner = () => {
             <ImageGallery thumbnailPosition={'left'} items={images} />
             <div className="scroll-left flex my-2">
                 <h2 className='font-bold px-4 text-black'>Headline</h2>
-                <p>We will be provide the best education and also we create a proper man to your son. </p>
+                <p>We will be provide the best education and also we create a proper man to your son.</p>
             </div>
         </div>
     );

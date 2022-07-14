@@ -12,12 +12,12 @@ import VicePrinciple from './VicePrinciple';
 const Home = () => {
     return (
         <div className='w-full lg:w-11/12 px-4 lg:px-6 mx-auto'>
-            <div className='w-full flex'>
-                <div className='w-8/12 py-3'>
+            <div className='w-full block md:flex'>
+                <div className='w-full md:w-8/12 py-3'>
                     <Banner></Banner>
                     <Event></Event>
                 </div>
-                <div className='w-4/12 py-3 ml-3'>
+                <div className='w-full md:w-4/12 py-3 ml-0 md:ml-3'>
                     <Chairman></Chairman>
                     <Principle></Principle>
                     <VicePrinciple></VicePrinciple>

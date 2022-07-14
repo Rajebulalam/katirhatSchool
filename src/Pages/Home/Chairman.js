@@ -12,7 +12,7 @@ const Chairman = () => {
             <h2 className='text-xl font-bold'>Mr.Bill Gates</h2>
             <h3>Chairman of Katirhat High School</h3>
             <address>Katirhat, Hathazari, Chattogram</address>
-            <Link className='text-secondary text-xl' to='/'>Read Message ...</Link>
+            <Link className='text-secondary text-xl' to='/chairmanMessage'>Read Message ...</Link>
         </div>
     );
 };

@@ -4,7 +4,7 @@ import vicePrinciple from '../../images/principle.png';
 
 const VicePrinciple = () => {
     return (
-        <div className='relative mt-[128px]'>
+        <div className='relative mt-6 md:mt-[128px]'>
             <h2 className='bg-primary p-3 pl-5 my-4 text-white text-lg principle'>Message from Vice-Principle</h2>
             <div className='flex items-center justify-center pb-3'>
                 <img className='w-[250px]' src={vicePrinciple} alt="principle" />

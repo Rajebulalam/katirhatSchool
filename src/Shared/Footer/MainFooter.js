@@ -1,5 +1,5 @@
 import { faFacebookF, faLinkedinIn, faWhatsapp } from '@fortawesome/fontawesome-free-brands';
-import { faAddressCard, faCommentSms, faDiagramNext, faEnvelope, faF, faHomeAlt, faLink, faLocationDot, faTriangleExclamation, faWheatAlt } from '@fortawesome/free-solid-svg-icons';
+import { faAddressCard, faCommentSms, faDiagramNext, faEnvelope, faHomeAlt, faLink, faLocationDot, faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 const MainFooter = () => {
     return (
         <div className='bg-primary'>
-            <div className='w-full lg:w-11/12 py-6 px-4 lg:px-6 mx-auto border-b-2'>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            <div className='w-full lg:w-11/12 pt-7 pb-4 px-4 lg:px-6 mx-auto'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 pb-8 gap-6 border-b-2'>
                     <div>
                         <h2 className='pb-5 text-white font-semibold text-2xl'>Internal Link</h2>
                         <ul>
@@ -63,12 +63,12 @@ const MainFooter = () => {
                         </div>
                         <div className='flex pt-2'>
                             <p> <FontAwesomeIcon className='text-accent pr-3' icon={faEnvelope}></FontAwesomeIcon> </p>
-                            <p className='text-white'>rajebulalam28@gmail.com</p>
+                            <p className='text-white'>rajebulalam27@gmail.com</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className='w-full lg:w-11/12 py-6 px-4 lg:px-6 mx-auto flex justify-between'>
+            <div className='w-full lg:w-11/12 py-6 px-4 lg:px-6 mx-auto block md:flex text-center md:justify-between'>
                 <p className='text-white'>Copyright &copy; 2022 All right reserved - Katirhat High School</p>
                 <p className='text-white'>Developed by - Rajebul Alam Khokan</p>
             </div>
