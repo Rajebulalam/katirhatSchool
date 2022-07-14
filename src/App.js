@@ -10,6 +10,7 @@ import ChairmanMessage from './Pages/Message/ChairmanMessage';
 import PrincipleMessage from './Pages/Message/PrincipleMessage';
 import VicePrincipleMessage from './Pages/Message/VicePrincipleMessage';
 import TeacherMessage from './Pages/Message/TeacherMessage';
+import AcademicHour from './Pages/Academic/AcademicHour';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path='/principleMessage' element={<PrincipleMessage></PrincipleMessage>}></Route>
         <Route path='/vicePrincipleMessage' element={<VicePrincipleMessage></VicePrincipleMessage>}></Route>
         <Route path='/teacherMessage' element={<TeacherMessage></TeacherMessage>}></Route>
+        <Route path='/academicHour' element={<AcademicHour></AcademicHour>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
