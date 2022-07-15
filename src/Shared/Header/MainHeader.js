@@ -32,7 +32,7 @@ const MainHeader = () => {
                 <li><Link className='text-white font-semibold hover:text-neutral' to='/library'>Library</Link></li>
                 <li><Link className='text-white font-semibold hover:text-neutral' to='/canteen'>Canteen</Link></li>
                 <li><Link className='text-white font-semibold hover:text-neutral' to='/guardian'>Guardian Shed</Link></li>
-                <li><Link className='text-white font-semibold hover:text-neutral' to='/'>Sports</Link></li>
+                <li><Link className='text-white font-semibold hover:text-neutral' to='/sport'>Sports</Link></li>
                 <li><Link className='text-white font-semibold hover:text-neutral' to='/'>Prayer Room</Link></li>
             </ul>
         </li>
