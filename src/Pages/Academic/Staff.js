@@ -10,7 +10,7 @@ const Staff = () => {
 
     return (
         <div className='w-full lg:w-11/12 px-4 lg:px-6 mx-auto py-12'>
-            <h2 style={{ fontFamily: 'Merienda' }} className='text-3xl font bold pb-6 text-center'>All of Our Teachers</h2>
+            <h2 style={{ fontFamily: 'Merienda' }} className='text-3xl font bold pb-6 text-center'>All of Our Staff</h2>
             {
                 staffs.map(staff => <div key={staff.id} className='w-full block md:flex shadow-xl rounded-md mb-12 p-12'>
                     <div className='w-full flex justify-center md:block md:w-4/12 mb-4 md:mb-0'>
