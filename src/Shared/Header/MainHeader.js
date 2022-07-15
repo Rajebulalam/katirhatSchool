@@ -17,8 +17,8 @@ const MainHeader = () => {
                 <li><Link className='text-white font-semibold hover:text-neutral' to='/'>Academic Calender</Link></li>
                 <li><Link className='text-white font-semibold hover:text-neutral' to='/classRoutine'>Class Routine</Link></li>
                 <li><Link className='text-white font-semibold hover:text-neutral' to='/extraCurricular'>Extra Co-curricular Activities</Link></li>
-                <li><Link className='text-white font-semibold hover:text-neutral' to='/'>Bool List</Link></li>
-                <li><Link className='text-white font-semibold hover:text-neutral' to='/'>Syllabus</Link></li>
+                <li><Link className='text-white font-semibold hover:text-neutral' to='/'>Book List</Link></li>
+                <li><Link className='text-white font-semibold hover:text-neutral' to='/syllabus'>Syllabus</Link></li>
                 <li><Link className='text-white font-semibold hover:text-neutral' to='/'>Teachers</Link></li>
                 <li><Link className='text-white font-semibold hover:text-neutral' to='/'>Stuffs</Link></li>
             </ul>

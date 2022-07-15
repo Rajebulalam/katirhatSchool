@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ClassRoutine = () => {
+const Syllabus = () => {
     return (
         <div className='w-full lg:w-11/12 px-4 lg:px-6 mx-auto py-12'>
-            <h2 style={{ fontFamily: 'Merienda' }} className='text-3xl font bold pb-6 text-center'>Class Routine</h2>
+            <h2 style={{ fontFamily: 'Merienda' }} className='text-3xl font bold pb-6 text-center'>Syllabus</h2>
             <table className='w-full'>
                 <thead>
                     <tr className='border'>
@@ -38,4 +38,4 @@ const ClassRoutine = () => {
     );
 };
 
-export default ClassRoutine;    
+export default Syllabus;

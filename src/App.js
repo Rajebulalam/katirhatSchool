@@ -13,6 +13,7 @@ import TeacherMessage from './Pages/Message/TeacherMessage';
 import AcademicHour from './Pages/Academic/AcademicHour';
 import ClassRoutine from './Pages/Academic/ClassRoutine';
 import ExtraCurriculumn from './Pages/Academic/ExtraCurriculumn';
+import Syllabus from './Pages/Academic/Syllabus';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path='/academicHour' element={<AcademicHour></AcademicHour>}></Route>
         <Route path='/classRoutine' element={<ClassRoutine></ClassRoutine>}></Route>
         <Route path='/extraCurricular' element={<ExtraCurriculumn></ExtraCurriculumn>}></Route>
+        <Route path='/syllabus' element={<Syllabus></Syllabus>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
