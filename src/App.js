@@ -16,6 +16,7 @@ import ExtraCurriculumn from './Pages/Academic/ExtraCurriculumn';
 import Syllabus from './Pages/Academic/Syllabus';
 import Teachers from './Pages/Academic/Teachers';
 import Staff from './Pages/Academic/Staff';
+import AcademicCalender from './Pages/Academic/AcademicCalender';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path='/syllabus' element={<Syllabus></Syllabus>}></Route>
         <Route path='/teachers' element={<Teachers></Teachers>}></Route>
         <Route path='/staff' element={<Staff></Staff>}></Route>
+        <Route path='/academicCalender' element={<AcademicCalender></AcademicCalender>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
