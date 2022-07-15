@@ -12,6 +12,7 @@ import VicePrincipleMessage from './Pages/Message/VicePrincipleMessage';
 import TeacherMessage from './Pages/Message/TeacherMessage';
 import AcademicHour from './Pages/Academic/AcademicHour';
 import ClassRoutine from './Pages/Academic/ClassRoutine';
+import ExtraCurriculumn from './Pages/Academic/ExtraCurriculumn';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path='/teacherMessage' element={<TeacherMessage></TeacherMessage>}></Route>
         <Route path='/academicHour' element={<AcademicHour></AcademicHour>}></Route>
         <Route path='/classRoutine' element={<ClassRoutine></ClassRoutine>}></Route>
+        <Route path='/extraCurricular' element={<ExtraCurriculumn></ExtraCurriculumn>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
