@@ -1,0 +1,26 @@
+[
+    {
+        "id": "01",
+        "name": "Principle",
+        "date": "17th",
+        "month": "07",
+        "year": "2022",
+        "img": "https://i.ibb.co/P5QvLXx/Notice-writing-for-school-camps-3.jpg"
+    },
+    {
+        "id": "02",
+        "name": "Principle",
+        "date": "22nd",
+        "month": "06",
+        "year": "2021",
+        "img": "https://i.ibb.co/TRMmdxw/Notice-covid19-student.jpg"
+    },
+    {
+        "id": "03",
+        "name": "Principle",
+        "date": "28th",
+        "month": "02",
+        "year": "2022",
+        "img": "https://i.ibb.co/4VHW43f/2802.jpg"
+    }
+]

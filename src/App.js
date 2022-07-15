@@ -22,6 +22,7 @@ import Canteen from './Pages/Facilities/Canteen';
 import GuardianRoom from './Pages/Facilities/GuardianRoom';
 import Sports from './Pages/Facilities/Sports';
 import PrayerRoom from './Pages/Facilities/PrayerRoom';
+import Notices from './Pages/Notice/Notices';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
         <Route path='/guardian' element={<GuardianRoom></GuardianRoom>}></Route>
         <Route path='/sport' element={<Sports></Sports>}></Route>
         <Route path='/prayer' element={<PrayerRoom></PrayerRoom>}></Route>
+        <Route path='/notice' element={<Notices></Notices>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

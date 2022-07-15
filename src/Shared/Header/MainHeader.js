@@ -36,7 +36,7 @@ const MainHeader = () => {
                 <li><Link className='text-white font-semibold hover:text-neutral' to='/prayer'>Prayer Room</Link></li>
             </ul>
         </li>
-        <li><Link className='text-white font-semibold hover:text-neutral' to='/'>Notices</Link></li>
+        <li><Link className='text-white font-semibold hover:text-neutral' to='/notice'>Notices</Link></li>
         <li tabIndex="0">
             <Link className='text-white font-semibold hover:text-neutral' to='/'>
                 Gallery
