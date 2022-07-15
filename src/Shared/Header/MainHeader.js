@@ -15,7 +15,7 @@ const MainHeader = () => {
             <ul className="p-2 bg-primary z-50">
                 <li><Link className='text-white font-semibold hover:text-neutral' to='/academicHour'>Academic Hours</Link></li>
                 <li><Link className='text-white font-semibold hover:text-neutral' to='/'>Academic Calender</Link></li>
-                <li><Link className='text-white font-semibold hover:text-neutral' to='/'>Class Routine</Link></li>
+                <li><Link className='text-white font-semibold hover:text-neutral' to='/classRoutine'>Class Routine</Link></li>
                 <li><Link className='text-white font-semibold hover:text-neutral' to='/'>Extra Co-curricular Activities</Link></li>
                 <li><Link className='text-white font-semibold hover:text-neutral' to='/'>Bool List</Link></li>
                 <li><Link className='text-white font-semibold hover:text-neutral' to='/'>Syllabus</Link></li>
