@@ -23,6 +23,7 @@ import GuardianRoom from './Pages/Facilities/GuardianRoom';
 import Sports from './Pages/Facilities/Sports';
 import PrayerRoom from './Pages/Facilities/PrayerRoom';
 import Notices from './Pages/Notice/Notices';
+import Images from './Pages/Gallery/Images';
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
         <Route path='/sport' element={<Sports></Sports>}></Route>
         <Route path='/prayer' element={<PrayerRoom></PrayerRoom>}></Route>
         <Route path='/notice' element={<Notices></Notices>}></Route>
+        <Route path='/images' element={<Images></Images>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
