@@ -20,7 +20,7 @@ const MainHeader = () => {
                 <li><Link className='text-white font-semibold hover:text-neutral' to='/'>Book List</Link></li>
                 <li><Link className='text-white font-semibold hover:text-neutral' to='/syllabus'>Syllabus</Link></li>
                 <li><Link className='text-white font-semibold hover:text-neutral' to='/teachers'>Teachers</Link></li>
-                <li><Link className='text-white font-semibold hover:text-neutral' to='/'>Stuffs</Link></li>
+                <li><Link className='text-white font-semibold hover:text-neutral' to='/staff'>Staff</Link></li>
             </ul>
         </li>
         <li tabIndex="0">

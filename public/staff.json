@@ -1,0 +1,92 @@
+[
+    {
+        "id": "01",
+        "name": "Mr.Abdul Kuddus",
+        "img": "https://i.ibb.co/dWrJbwH/karim.png",
+        "designation": "Office Accountant",
+        "department": "Staff Department",
+        "join": "11-02-2017",
+        "mobile": "01872-230000",
+        "identity": "01"
+    },
+    {
+        "id": "02",
+        "name": "Mr.Mosharrof Khondokar",
+        "img": "https://i.ibb.co/dWrJbwH/karim.png",
+        "designation": "Admin",
+        "department": "Staff Department",
+        "join": "11-02-2017",
+        "mobile": "01872-230000",
+        "identity": "02"
+    },
+    {
+        "id": "03",
+        "name": "Mr.Abdul Baset",
+        "img": "https://i.ibb.co/dWrJbwH/karim.png",
+        "designation": "Security Supervisor",
+        "department": "Staff Department",
+        "join": "11-02-2017",
+        "mobile": "01872-230000",
+        "identity": "03"
+    },
+    {
+        "id": "04",
+        "name": "Mr.Abdul Kuddus",
+        "img": "https://i.ibb.co/dWrJbwH/karim.png",
+        "designation": "Office Assistant",
+        "department": "Staff Department",
+        "join": "11-02-2017",
+        "mobile": "01872-230000",
+        "identity": "04"
+    },
+    {
+        "id": "05",
+        "name": "Mr.Abdul Kuddus",
+        "img": "https://i.ibb.co/dWrJbwH/karim.png",
+        "designation": "Office Assistant",
+        "department": "Staff Department",
+        "join": "11-02-2017",
+        "mobile": "01872-230000",
+        "identity": "05"
+    },
+    {
+        "id": "06",
+        "name": "Mr.Abdul Kuddus",
+        "img": "https://i.ibb.co/dWrJbwH/karim.png",
+        "designation": "Office Assistant",
+        "department": "Staff Department",
+        "join": "11-02-2017",
+        "mobile": "01872-230000",
+        "identity": "06"
+    },
+    {
+        "id": "07",
+        "name": "Mr.Abdul Kuddus",
+        "img": "https://i.ibb.co/dWrJbwH/karim.png",
+        "designation": "Technical Assistant",
+        "department": "Staff Department",
+        "join": "11-02-2017",
+        "mobile": "01872-230000",
+        "identity": "07"
+    },
+    {
+        "id": "08",
+        "name": "Mr.Abdul Kuddus",
+        "img": "https://i.ibb.co/dWrJbwH/karim.png",
+        "designation": "Technical Assistant",
+        "department": "Staff Department",
+        "join": "11-02-2017",
+        "mobile": "01872-230000",
+        "identity": "08"
+    },
+    {
+        "id": "09",
+        "name": "Mr.Abdul Kuddus",
+        "img": "https://i.ibb.co/dWrJbwH/karim.png",
+        "designation": "Class Attendant",
+        "department": "Staff Department",
+        "join": "11-02-2017",
+        "mobile": "01872-230000",
+        "identity": "09"
+    }
+]

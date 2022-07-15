@@ -15,6 +15,7 @@ import ClassRoutine from './Pages/Academic/ClassRoutine';
 import ExtraCurriculumn from './Pages/Academic/ExtraCurriculumn';
 import Syllabus from './Pages/Academic/Syllabus';
 import Teachers from './Pages/Academic/Teachers';
+import Staff from './Pages/Academic/Staff';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path='/extraCurricular' element={<ExtraCurriculumn></ExtraCurriculumn>}></Route>
         <Route path='/syllabus' element={<Syllabus></Syllabus>}></Route>
         <Route path='/teachers' element={<Teachers></Teachers>}></Route>
+        <Route path='/staff' element={<Staff></Staff>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

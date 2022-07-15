@@ -13,7 +13,7 @@ const Teachers = () => {
             <h2 style={{ fontFamily: 'Merienda' }} className='text-3xl font bold pb-6 text-center'>All of Our Teachers</h2>
             {
                 teachers.map(teacher => <div key={teacher.id} className='w-full block md:flex shadow-xl rounded-md mb-12 p-12'>
-                    <div className='w-full md:w-4/12 mb-4 md:mb-0'>
+                    <div className='w-full flex justify-center md:block md:w-4/12 mb-4 md:mb-0'>
                         <img className='w-[200px]' src={teacher.img} alt="teacher" />
                     </div>
                     <div className='w-full md:w-8/12'>
