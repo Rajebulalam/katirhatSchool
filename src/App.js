@@ -26,6 +26,8 @@ import Notices from './Pages/Notice/Notices';
 import Images from './Pages/Gallery/Images';
 import SportGallery from './Pages/Gallery/SportGallery';
 import Videos from './Pages/Gallery/Videos';
+import AdmissionInstruction from './Pages/Admission/AdmissionInstruction';
+import OnlineAdmission from './Pages/Admission/OnlineAdmission';
 
 function App() {
   return (
@@ -54,6 +56,8 @@ function App() {
         <Route path='/images' element={<Images></Images>}></Route>
         <Route path='/sportGallery' element={<SportGallery></SportGallery>}></Route>
         <Route path='/video' element={<Videos></Videos>}></Route>
+        <Route path='/admissionInstruction' element={<AdmissionInstruction></AdmissionInstruction>}></Route>
+        <Route path='/onlineAdmission' element={<OnlineAdmission></OnlineAdmission>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
