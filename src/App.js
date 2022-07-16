@@ -29,6 +29,7 @@ import Videos from './Pages/Gallery/Videos';
 import AdmissionInstruction from './Pages/Admission/AdmissionInstruction';
 import OnlineAdmission from './Pages/Admission/OnlineAdmission';
 import About from './Pages/About/About';
+import Contact from './Pages/Contact/Contact';
 
 function App() {
   return (
@@ -60,6 +61,7 @@ function App() {
         <Route path='/admissionInstruction' element={<AdmissionInstruction></AdmissionInstruction>}></Route>
         <Route path='/onlineAdmission' element={<OnlineAdmission></OnlineAdmission>}></Route>
         <Route path='/history' element={<About></About>}></Route>
+        <Route path='/contact' element={<Contact></Contact>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

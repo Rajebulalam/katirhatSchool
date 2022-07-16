@@ -58,7 +58,7 @@ const MainHeader = () => {
             </ul>
         </li>
         <li><Link className='text-white font-semibold hover:text-neutral' to='/history'>About</Link></li>
-        <li><Link className='text-white font-semibold hover:text-neutral' to='/'>Contact</Link></li>
+        <li><Link className='text-white font-semibold hover:text-neutral' to='/contact'>Contact</Link></li>
         <li tabIndex="0">
             <Link className='text-white font-semibold hover:text-neutral' to='/'>
                 Login
