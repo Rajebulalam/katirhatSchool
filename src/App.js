@@ -28,6 +28,7 @@ import SportGallery from './Pages/Gallery/SportGallery';
 import Videos from './Pages/Gallery/Videos';
 import AdmissionInstruction from './Pages/Admission/AdmissionInstruction';
 import OnlineAdmission from './Pages/Admission/OnlineAdmission';
+import About from './Pages/About/About';
 
 function App() {
   return (
@@ -58,6 +59,7 @@ function App() {
         <Route path='/video' element={<Videos></Videos>}></Route>
         <Route path='/admissionInstruction' element={<AdmissionInstruction></AdmissionInstruction>}></Route>
         <Route path='/onlineAdmission' element={<OnlineAdmission></OnlineAdmission>}></Route>
+        <Route path='/history' element={<About></About>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
