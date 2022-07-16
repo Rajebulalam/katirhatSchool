@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const OnlineAdmission = () => {
 
@@ -48,6 +49,7 @@ const OnlineAdmission = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         console.log(name, studentMobile, guardian, guardianMobile, guardianEmail, guardianOccupation, grades);
+        toast.success('Successfully Applied');
         event.target.reset();
     }
 

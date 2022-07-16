@@ -30,6 +30,8 @@ import AdmissionInstruction from './Pages/Admission/AdmissionInstruction';
 import OnlineAdmission from './Pages/Admission/OnlineAdmission';
 import About from './Pages/About/About';
 import Contact from './Pages/Contact/Contact';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -64,6 +66,7 @@ function App() {
         <Route path='/contact' element={<Contact></Contact>}></Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer />
     </div>
   );
 }
