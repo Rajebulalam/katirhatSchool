@@ -9,37 +9,37 @@ const Images = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 <div className='p-5 shadow-xl text-center'>
                     <div className='flex justify-center'>
-                        <Link to='/'><img className='w-[300px]' src={sport} alt="sports" /></Link>
+                        <Link to='/sportGallery'><img className='w-[300px]' src={sport} alt="sports" /></Link>
                     </div>
                     <h2 style={{ fontFamily: 'Merienda' }} className='text-xl py-2'>Annual Sports</h2>
                 </div>
                 <div className='p-5 shadow-xl text-center'>
                     <div className='flex justify-center'>
-                        <Link to='/'><img className='w-[300px]' src={sport} alt="sports" /></Link>
+                        <Link to='/sportGallery'><img className='w-[300px]' src={sport} alt="sports" /></Link>
                     </div>
                     <h2 style={{ fontFamily: 'Merienda' }} className='text-xl py-2'>Annual Sports</h2>
                 </div>
                 <div className='p-5 shadow-xl text-center'>
                     <div className='flex justify-center'>
-                        <Link to='/'><img className='w-[300px]' src={sport} alt="sports" /></Link>
+                        <Link to='/sportGallery'><img className='w-[300px]' src={sport} alt="sports" /></Link>
                     </div>
                     <h2 style={{ fontFamily: 'Merienda' }} className='text-xl py-2'>Annual Sports</h2>
                 </div>
                 <div className='p-5 shadow-xl text-center'>
                     <div className='flex justify-center'>
-                        <Link to='/'><img className='w-[300px]' src={sport} alt="sports" /></Link>
+                        <Link to='/sportGallery'><img className='w-[300px]' src={sport} alt="sports" /></Link>
                     </div>
                     <h2 style={{ fontFamily: 'Merienda' }} className='text-xl py-2'>Annual Sports</h2>
                 </div>
                 <div className='p-5 shadow-xl text-center'>
                     <div className='flex justify-center'>
-                        <Link to='/'><img className='w-[300px]' src={sport} alt="sports" /></Link>
+                        <Link to='/sportGallery'><img className='w-[300px]' src={sport} alt="sports" /></Link>
                     </div>
                     <h2 style={{ fontFamily: 'Merienda' }} className='text-xl py-2'>Annual Sports</h2>
                 </div>
                 <div className='p-5 shadow-xl text-center'>
                     <div className='flex justify-center'>
-                        <Link to='/'><img className='w-[300px]' src={sport} alt="sports" /></Link>
+                        <Link to='/sportGallery'><img className='w-[300px]' src={sport} alt="sports" /></Link>
                     </div>
                     <h2 style={{ fontFamily: 'Merienda' }} className='text-xl py-2'>Annual Sports</h2>
                 </div>
