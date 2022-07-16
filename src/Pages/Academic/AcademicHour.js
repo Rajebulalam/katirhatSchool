@@ -1,8 +1,12 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const AcademicHour = () => {
     return (
         <div className='w-full lg:w-11/12 px-4 lg:px-6 mx-auto py-12 pb-16'>
+            <Helmet>
+                <title>Katirhat High School - Academic Hour</title>
+            </Helmet>
             <h2 style={{ fontFamily: 'Merienda' }} className='text-3xl font-bold text-center pb-8'>Academic Hours</h2>
             <div className="overflow-x-auto">
                 <div className="overflow-x-auto">

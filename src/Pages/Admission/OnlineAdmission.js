@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { toast } from 'react-toastify';
 
 const OnlineAdmission = () => {
@@ -55,6 +56,9 @@ const OnlineAdmission = () => {
 
     return (
         <div className='w-full lg:w-11/12 px-4 lg:px-6 mx-auto py-12'>
+            <Helmet>
+                <title>Katirhat High School - Online Admission</title>
+            </Helmet>
             <h2 style={{ fontFamily: 'Merienda' }} className='text-neutral text-3xl pb-8 text-center font-bold'>Apply Now</h2>
             <div className='w-full md:w-9/12 p-4 md:p-8 mx-auto bg-slate-200 rounded-sm'>
                 <form onSubmit={handleSubmit}>

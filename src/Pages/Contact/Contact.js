@@ -1,8 +1,12 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const Contact = () => {
     return (
         <div className='w-full lg:w-11/12 px-4 lg:px-6 mx-auto py-12'>
+            <Helmet>
+                <title>Katirhat High School - Contact</title>
+            </Helmet>
             <h2 style={{ fontFamily: 'Merienda' }} className='text-neutral text-3xl pb-8 text-center font-bold'>Contact With Us</h2>
             <div className='p-4 w-full sm:w-7/12 md:p-8 rounded-sm shadow-xl my-3 mx-auto'>
                 <h2 style={{ fontFamily: 'Merienda' }} className='text-2xl font-bold'>Katirhat High School</h2>

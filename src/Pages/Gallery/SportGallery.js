@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const SportGallery = () => {
 
@@ -10,6 +11,9 @@ const SportGallery = () => {
 
     return (
         <div className='w-full lg:w-11/12 px-4 lg:px-6 mx-auto py-12'>
+            <Helmet>
+                <title>Katirhat High School - Sport Gallery</title>
+            </Helmet>
             <h2 style={{ fontFamily: 'Merienda' }} className='text-neutral text-3xl pb-8 text-center font-bold'>Sports Gallery</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
                 {

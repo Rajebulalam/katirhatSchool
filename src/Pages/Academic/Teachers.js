@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const Teachers = () => {
 
@@ -10,6 +11,9 @@ const Teachers = () => {
 
     return (
         <div className='w-full lg:w-11/12 px-4 lg:px-6 mx-auto py-12'>
+            <Helmet>
+                <title>Katirhat High School - Teachers</title>
+            </Helmet>
             <h2 style={{ fontFamily: 'Merienda' }} className='text-3xl font bold pb-6 text-center'>All of Our Teachers</h2>
             {
                 teachers.map(teacher => <div key={teacher.id} className='w-full block md:flex shadow-xl rounded-md mb-12 p-12'>

@@ -1,8 +1,12 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const VicePrincipleMessage = () => {
     return (
         <div className='w-full lg:w-11/12 px-4 lg:px-6 mx-auto py-8'>
+            <Helmet>
+                <title>Katirhat High School - Vice-Principle Message</title>
+            </Helmet>
             <h2 className='text-2xl font-bold py-1'>Mr.Khondokar Mosharrof</h2>
             <h4 className='text-lg'>Vice-Principle of Katirhat High School</h4>
             <address className='text-lg'>Katirhat, Hathazari, Chattogram, Bangladesh</address>
