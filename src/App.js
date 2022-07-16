@@ -25,6 +25,7 @@ import PrayerRoom from './Pages/Facilities/PrayerRoom';
 import Notices from './Pages/Notice/Notices';
 import Images from './Pages/Gallery/Images';
 import SportGallery from './Pages/Gallery/SportGallery';
+import Videos from './Pages/Gallery/Videos';
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
         <Route path='/notice' element={<Notices></Notices>}></Route>
         <Route path='/images' element={<Images></Images>}></Route>
         <Route path='/sportGallery' element={<SportGallery></SportGallery>}></Route>
+        <Route path='/video' element={<Videos></Videos>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

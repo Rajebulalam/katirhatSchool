@@ -44,7 +44,7 @@ const MainHeader = () => {
             </Link>
             <ul className="p-2 bg-primary z-50">
                 <li><Link className='text-white font-semibold hover:text-neutral' to='/images'>Images</Link></li>
-                <li><Link className='text-white font-semibold hover:text-neutral' to='/'>Videos</Link></li>
+                <li><Link className='text-white font-semibold hover:text-neutral' to='/video'>Videos</Link></li>
             </ul>
         </li>
         <li tabIndex="0">
