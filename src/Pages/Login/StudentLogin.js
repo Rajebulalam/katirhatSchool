@@ -17,11 +17,12 @@ const StudentLogin = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         console.log(studentId, studentPass);
+        event.target.reset();
     }
 
     return (
         <div className='w-full md:w-11/12 px-4 md:px-6 mx-auto py-12'>
-            <h2 style={{ fontFamily: 'Merienda' }} className='pb-6 text-3xl text-neutral font-bold text-center'>Login As Student</h2>
+            <h2 style={{ fontFamily: 'Merienda' }} className='pb-6 text-3xl text-neutral font-bold text-center'>Login As A Student</h2>
             <div className='w-full md:w-6/12 p-3 py-12 mx-auto bg-slate-200 rounded-sm'>
                 <form onSubmit={handleSubmit}>
                     <div className='w-full block md:flex items-center'>

@@ -33,6 +33,7 @@ import Contact from './Pages/Contact/Contact';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import StudentLogin from './Pages/Login/StudentLogin';
+import TeacherLogin from './Pages/Login/TeacherLogin';
 
 function App() {
   return (
@@ -66,6 +67,7 @@ function App() {
         <Route path='/history' element={<About></About>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>
         <Route path='/studentLogin' element={<StudentLogin></StudentLogin>}></Route>
+        <Route path='/teacherLogin' element={<TeacherLogin></TeacherLogin>}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer />
