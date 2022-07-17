@@ -32,6 +32,7 @@ import About from './Pages/About/About';
 import Contact from './Pages/Contact/Contact';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import StudentLogin from './Pages/Login/StudentLogin';
 
 function App() {
   return (
@@ -64,6 +65,7 @@ function App() {
         <Route path='/onlineAdmission' element={<OnlineAdmission></OnlineAdmission>}></Route>
         <Route path='/history' element={<About></About>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>
+        <Route path='/studentLogin' element={<StudentLogin></StudentLogin>}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer />

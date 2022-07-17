@@ -66,7 +66,7 @@ const MainHeader = () => {
             </Link>
             <ul className="p-2 bg-primary z-50">
                 <li><Link className='text-white font-semibold hover:text-neutral' to='/'>Teachers Panel</Link></li>
-                <li><Link className='text-white font-semibold hover:text-neutral' to='/'>Student Panel</Link></li>
+                <li><Link className='text-white font-semibold hover:text-neutral' to='/studentLogin'>Student Panel</Link></li>
             </ul>
         </li>
     </>
