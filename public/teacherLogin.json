@@ -1,0 +1,52 @@
+[
+    {
+        "id": "1",
+        "teacher": "01",
+        "password": "samiul"
+    },
+    {
+        "id": "2",
+        "teacher": "02",
+        "password": "tamim"
+    },
+    {
+        "id": "3",
+        "teacher": "03",
+        "password": "sakib"
+    },
+    {
+        "id": "4",
+        "teacher": "04",
+        "password": "rahim"
+    },
+    {
+        "id": "5",
+        "teacher": "05",
+        "password": "khaled"
+    },
+    {
+        "id": "6",
+        "teacher": "06",
+        "password": "jabed"
+    },
+    {
+        "id": "7",
+        "teacher": "07",
+        "password": "jiku"
+    },
+    {
+        "id": "8",
+        "teacher": "08",
+        "password": "aftab"
+    },
+    {
+        "id": "9",
+        "teacher": "09",
+        "password": "belal"
+    },
+    {
+        "id": "10",
+        "teacher": "010",
+        "password": "jaber"
+    }
+]

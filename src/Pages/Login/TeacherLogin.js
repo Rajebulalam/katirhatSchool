@@ -1,8 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const TeacherLogin = () => {
 
+    const [teachersLogin, setTeachersLogin] = useState([]);
 
+    useEffect(() => {
+        fetch('teacherLogin.json')
+            .then(res => res.json())
+            .then(data => setTeachersLogin(data))
+    }, [])
 
     const [teacherId, setTeacherId] = useState('');
     const handleTeacherId = event => {
@@ -18,7 +24,15 @@ const TeacherLogin = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log(teacherId, teacherPass);
+        const loginResult = teachersLogin.find(teachers => teachers.teacher === teacherId && teachers.password === teacherPass);
+        console.log(loginResult);
+
+        if (loginResult) {
+            console.log('Match The Id For');
+        }
+        else {
+            console.log('Does not Match');
+        }
         event.target.reset();
     }
 
