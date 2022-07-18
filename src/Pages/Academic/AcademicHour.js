@@ -24,8 +24,8 @@ const AcademicHour = () => {
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td className='text-center text-lg'>vi, vii, viii, ix, x</td>
-                                <td className='text-center text-lg'>10:00 am - 04:00 pm</td>
+                                <td className='text-center text-md md:text-lg'>vi, vii, viii, ix, x</td>
+                                <td className='text-center text-md md:text-lg'>10:00 am - 04:00 pm</td>
                             </tr>
                         </tfoot>
                     </table>

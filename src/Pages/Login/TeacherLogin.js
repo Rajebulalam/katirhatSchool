@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const TeacherLogin = () => {
 
+    // Teachers Login Loaded and Set
     const [teachersLogin, setTeachersLogin] = useState([]);
 
     useEffect(() => {
@@ -10,20 +11,25 @@ const TeacherLogin = () => {
             .then(data => setTeachersLogin(data))
     }, [])
 
+    // Taken User Id from Input
     const [teacherId, setTeacherId] = useState('');
     const handleTeacherId = event => {
         setTeacherId(event.target.value);
         console.log(event.target.value);
     }
 
+    // Taken User Password from Input
     const [teacherPass, setTeacherPass] = useState('');
     const handleTeacherPass = event => {
         setTeacherPass(event.target.value);
         console.log(event.target.value);
     }
 
+    // Submit Taken Input
     const handleSubmit = async (event) => {
         event.preventDefault();
+
+        // Find Id with Users Input
         const loginResult = teachersLogin.find(teachers => teachers.teacher === teacherId && teachers.password === teacherPass);
         console.log(loginResult);
 

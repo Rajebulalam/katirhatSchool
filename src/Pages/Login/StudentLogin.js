@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const StudentLogin = () => {
 
+    // Student Login Loaded and Set
     const [studentsLogin, setStudentsLogin] = useState([]);
 
     useEffect(() => {
@@ -10,29 +13,40 @@ const StudentLogin = () => {
             .then(data => setStudentsLogin(data))
     }, [])
 
+    // Taken User Id from Input
     const [studentId, setStudentId] = useState('');
     const handleStudentId = event => {
         setStudentId(event.target.value);
         console.log(event.target.value);
     }
 
+    // Taken User Password from Input
     const [studentPass, setStudentPass] = useState('');
     const handleStudentPass = event => {
         setStudentPass(event.target.value);
         console.log(event.target.value);
     }
 
+    const navigate = useNavigate();
+
+    // Submit Taken Input
     const handleSubmit = async (event) => {
         event.preventDefault();
+
+        // Find Id with Users Input
         const loginResult = studentsLogin.find(students => students.student === studentId && students.password === studentPass);
         console.log(loginResult);
 
         if (loginResult) {
-            console.log('Match The Id For');
+            localStorage.setItem('student', JSON.stringify(loginResult));
+            navigate('/home');
+            toast.success('Login Successfylly');
+            window.location.reload();
         }
         else {
-            console.log('Does not Match');
+            toast.error('Login failed');
         }
+
         event.target.reset();
     }
 

@@ -5,6 +5,8 @@ import './MainHeader.css';
 
 const MainHeader = () => {
 
+    const student = localStorage.getItem('student');
+
     const menuItem = <>
         <li><Link className='text-white font-semibold hover:text-neutral' to='/'>Home</Link></li>
         <li tabIndex="0">
@@ -59,6 +61,9 @@ const MainHeader = () => {
         </li>
         <li><Link className='text-white font-semibold hover:text-neutral' to='/history'>About</Link></li>
         <li><Link className='text-white font-semibold hover:text-neutral' to='/contact'>Contact</Link></li>
+        {
+            student === null ? ' ' : <li><Link className='text-white font-semibold hover:text-neutral' to='/dashboard'>Dashboard</Link></li>
+        }
         <li tabIndex="0">
             <Link className='text-white font-semibold hover:text-neutral' to='/'>
                 Login
