@@ -1,11 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import school from '../../images/logo.png';
 import './MainHeader.css';
 
 const MainHeader = () => {
 
+    const navigate = useNavigate();
+
     const student = localStorage.getItem('student');
+
+    const logOut = async () => {
+        localStorage.removeItem('student');
+        navigate('/home');
+    }
 
     const menuItem = <>
         <li><Link className='text-white font-semibold hover:text-neutral' to='/'>Home</Link></li>
@@ -64,16 +71,18 @@ const MainHeader = () => {
         {
             student === null ? ' ' : <li><Link className='text-white font-semibold hover:text-neutral' to='/dashboard'>Dashboard</Link></li>
         }
-        <li tabIndex="0">
-            <Link className='text-white font-semibold hover:text-neutral' to='/'>
-                Login
-                <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
-            </Link>
-            <ul className="p-2 bg-primary z-50">
-                <li><Link className='text-white font-semibold hover:text-neutral' to='/teacherLogin'>Teachers Panel</Link></li>
-                <li><Link className='text-white font-semibold hover:text-neutral' to='/studentLogin'>Student Panel</Link></li>
-            </ul>
-        </li>
+        {
+            student ? <button onClick={logOut} className="btn btn-outline w-[110px] mx-1 sm:mt-2 text-white lg:mt-[-1px]"><Link to='/home'>Log Out</Link></button> : <li tabIndex="0">
+                <Link className='text-white font-semibold hover:text-neutral' to='/'>
+                    Login
+                    <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
+                </Link>
+                <ul className="p-2 bg-primary z-50">
+                    <li><Link className='text-white font-semibold hover:text-neutral' to='/teacherLogin'>Teachers Panel</Link></li>
+                    <li><Link className='text-white font-semibold hover:text-neutral' to='/studentLogin'>Student Panel</Link></li>
+                </ul>
+            </li>
+        }
     </>
 
     return (
@@ -90,12 +99,21 @@ const MainHeader = () => {
                     </div>
                     <Link to='/' className="mt-[-22px] normal-case text-xl hidden lg:block"><img className='w-[50px]' src={school} alt="logo" /></Link>
                 </div>
-                <Link to='/' className="btn btn-ghost normal-case text-xl navbar-end lg:hidden"><img className='w-[50px]' src={school} alt="logo" /></Link>
+                {
+                    student ? <Link to='/' className="btn btn-ghost normal-case text-xl navbar-center lg:hidden"><img className='w-[50px]' src={school} alt="logo" /></Link> : <Link to='/' className="btn btn-ghost normal-case text-xl navbar-end lg:hidden"><img className='w-[50px]' src={school} alt="logo" /></Link>
+                }
                 <div className="navbar-end hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">
                         {menuItem}
                     </ul>
                 </div>
+                {
+                    student && <div className="navbar-end flex lg:hidden">
+                        <label tabIndex="1" htmlFor="my-drawer-2" className="btn btn-ghost navbar-end drawer-button lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                        </label>
+                    </div>
+                }
             </div>
         </div>
     );
