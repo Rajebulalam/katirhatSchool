@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import Profile from './Profile';
+import { toast } from 'react-toastify';
 
 const MyProfile = () => {
 
@@ -56,6 +57,8 @@ const MyProfile = () => {
                 console.log(data);
                 refetch();
             })
+
+        toast.success('Profile Updated');
     }
 
 
