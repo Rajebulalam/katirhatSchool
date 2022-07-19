@@ -35,6 +35,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import StudentLogin from './Pages/Login/StudentLogin';
 import TeacherLogin from './Pages/Login/TeacherLogin';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import MyProfile from './Pages/Dashboard/MyProfile';
+import Blogs from './Pages/Dashboard/Blogs';
+import Problems from './Pages/Dashboard/Problems';
 
 function App() {
   return (
@@ -69,7 +72,11 @@ function App() {
         <Route path='/contact' element={<Contact></Contact>}></Route>
         <Route path='/studentLogin' element={<StudentLogin></StudentLogin>}></Route>
         <Route path='/teacherLogin' element={<TeacherLogin></TeacherLogin>}></Route>
-        <Route path='/dashboard' element={<Dashboard></Dashboard>}></Route>
+        <Route path='dashboard' element={<Dashboard></Dashboard>}>
+          <Route index element={<MyProfile></MyProfile>}></Route>
+          <Route path='blogs' element={<Blogs></Blogs>}></Route>
+          <Route path='problems' element={<Problems></Problems>}></Route>
+        </Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer />

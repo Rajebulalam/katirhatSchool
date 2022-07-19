@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import school from '../../images/logo.png';
 import './MainHeader.css';
+import { toast } from 'react-toastify';
 
 const MainHeader = () => {
 
@@ -12,6 +13,7 @@ const MainHeader = () => {
     const logOut = async () => {
         localStorage.removeItem('student');
         navigate('/home');
+        toast.success('Log out successfully');
     }
 
     const menuItem = <>
