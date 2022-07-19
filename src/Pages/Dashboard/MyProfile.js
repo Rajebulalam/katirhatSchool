@@ -88,35 +88,35 @@ const MyProfile = () => {
                         </div>
                         <div className="pb-4">
                             <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="city">Roll</label>
-                            <input className='bg-slate-200 p-3 w-full lg:max-w-lg rounded-sm' type="text" name="roll" id="roll" />
+                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" name="roll" id="roll" />
                         </div>
                         <div className="pb-4">
                             <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="phone">Phone</label>
-                            <input className='bg-slate-200 p-3 w-full lg:max-w-lg rounded-sm' type="text" name="phone" id="phone" />
+                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" name="phone" id="phone" />
                         </div>
                         <div className="pb-4">
                             <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="phone">City</label>
-                            <input className='bg-slate-200 p-3 w-full lg:max-w-lg rounded-sm' type="text" name="city" id="city" />
+                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" name="city" id="city" />
                         </div>
                         <div className="pb-4">
                             <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="phone">Village</label>
-                            <input className='bg-slate-200 p-3 w-full lg:max-w-lg rounded-sm' type="text" name="village" id="village" />
+                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" name="village" id="village" />
                         </div>
                         <div className="pb-4">
                             <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="phone">Bari</label>
-                            <input className='bg-slate-200 p-3 w-full lg:max-w-lg rounded-sm' type="text" name="bari" id="bari" />
+                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" name="bari" id="bari" />
                         </div>
                         <div className="pb-4">
                             <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="phone">Word No</label>
-                            <input className='bg-slate-200 p-3 w-full lg:max-w-lg rounded-sm' type="text" name="word" id="word" />
+                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" name="word" id="word" />
                         </div>
                         <div className='pb-4'>
                             <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="linkedin">Facebook Link</label>
-                            <input className='bg-slate-200 p-3 w-full lg:max-w-lg rounded-sm' type="text" name="facebook" id="facebook" />
+                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" name="facebook" id="facebook" />
                         </div>
                         <div className="pb-4">
                             <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="img">Image Link</label>
-                            <input className='bg-slate-200 p-3 w-full lg:max-w-lg rounded-sm' type="text" name="img" id="img" />
+                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" name="img" id="img" />
                         </div>
                         <div className='flex items-start justify-center'>
                             <button type="submit" className='btn'>Update Profile</button>
