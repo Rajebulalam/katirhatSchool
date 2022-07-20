@@ -40,6 +40,7 @@ import Blogs from './Pages/Dashboard/Blogs';
 import Problems from './Pages/Dashboard/Problems';
 import AddBlogs from './Pages/Dashboard/AddBlogs';
 import AddProblems from './Pages/Dashboard/AddProblems';
+import StudentNotice from './Pages/Dashboard/StudentNotice';
 
 function App() {
   return (
@@ -80,6 +81,7 @@ function App() {
           <Route path='problems' element={<Problems></Problems>}></Route>
           <Route path='addBlogs' element={<AddBlogs></AddBlogs>}></Route>
           <Route path='addProblems' element={<AddProblems></AddProblems>}></Route>
+          <Route path='studentNotice' element={<StudentNotice></StudentNotice>}></Route>
         </Route>
       </Routes>
       <Footer></Footer>
