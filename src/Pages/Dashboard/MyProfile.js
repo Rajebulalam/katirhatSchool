@@ -2,8 +2,11 @@ import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import Profile from './Profile';
 import { toast } from 'react-toastify';
+import { useForm } from 'react-hook-form';
 
 const MyProfile = () => {
+
+    const { register, handleSubmit, formState: { errors } } = useForm();
 
     const students = JSON.parse(localStorage.getItem("student"));
 
@@ -20,47 +23,51 @@ const MyProfile = () => {
     const studentId = students?.student;
     const studentPass = students?.password;
 
-    const updateProfile = event => {
-        event.preventDefault();
-        const name = event.target.name.value;
-        const grade = event.target.grade.value;
-        const roll = event.target.roll.value;
-        const phone = event.target.phone.value;
-        const city = event.target.city.value;
-        const village = event.target.village.value;
-        const bari = event.target.bari.value;
-        const word = event.target.word.value;
-        const facebook = event.target.facebook.value;
-        const img = event.target.img.value;
-        const update = {
-            name,
-            grade,
-            roll,
-            phone,
-            city,
-            village,
-            bari,
-            word,
-            facebook,
-            img
-        };
+    const imageStorageKey = 'eb758106d1c4650d8ab4d6a4ff0243a9';
 
-        fetch(`http://localhost:5000/students/${studentId}`, {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(update)
+    const onSubmit = async data => {
+        const image = data.image[0];
+        let formData = new FormData();
+        formData.append('image', image);
+        const url = `https://api.imgbb.com/1/upload?key=${imageStorageKey}`;
+        fetch(url, {
+            method: 'POST',
+            body: formData
         })
             .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                refetch();
+            .then(result => {
+                if (result.success) {
+                    const img = result.data.url;
+                    const update = {
+                        name: data.name,
+                        grade: data.grade,
+                        roll: data.roll,
+                        phone: data.phone,
+                        city: data.city,
+                        village: data.village,
+                        bari: data.bari,
+                        word: data.word,
+                        facebook: data.facebook,
+                        img: img
+                    }
+
+                    // Send to the data base
+                    fetch(`http://localhost:5000/students/${studentId}`, {
+                        method: 'PUT',
+                        headers: {
+                            'content-type': 'application/json'
+                        },
+                        body: JSON.stringify(update)
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            toast.success('Profile Updated');
+                            refetch();
+                            data.reset();
+                        })
+                }
             })
-
-        toast.success('Profile Updated');
     }
-
 
     return (
         <div className='w-full block lg:flex'>
@@ -80,46 +87,46 @@ const MyProfile = () => {
             <div className='w-full lg:w-6/12 p-4 bg-primary rounded-sm mr-0 lg:ml-2'>
                 <h2 style={{ fontFamily: 'Merienda' }} className='text-center text-3xl font-bold text-neutral py-3'>Update Profile</h2>
                 <div>
-                    <form onSubmit={updateProfile}>
+                    <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="pb-4">
                             <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="education">Name</label>
-                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" name="name" id="name" />
+                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" {...register("name", { required: true })} />
                         </div>
                         <div className="pb-4">
-                            <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="district">Grade</label>
-                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" name="grade" id="grade" />
+                            <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="education">Grade</label>
+                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" {...register("grade", { required: true })} />
                         </div>
                         <div className="pb-4">
-                            <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="city">Roll</label>
-                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" name="roll" id="roll" />
+                            <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="education">Roll</label>
+                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" {...register("roll", { required: true })} />
                         </div>
                         <div className="pb-4">
-                            <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="phone">Phone</label>
-                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" name="phone" id="phone" />
+                            <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="education">Phone</label>
+                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" {...register("phone", { required: true })} />
                         </div>
                         <div className="pb-4">
-                            <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="phone">City</label>
-                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" name="city" id="city" />
+                            <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="education">City</label>
+                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" {...register("city", { required: true })} />
                         </div>
                         <div className="pb-4">
-                            <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="phone">Village</label>
-                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" name="village" id="village" />
+                            <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="education">Village</label>
+                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" {...register("village", { required: true })} />
                         </div>
                         <div className="pb-4">
-                            <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="phone">Bari</label>
-                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" name="bari" id="bari" />
+                            <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="education">Bari</label>
+                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" {...register("bari", { required: true })} />
                         </div>
                         <div className="pb-4">
-                            <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="phone">Word No</label>
-                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" name="word" id="word" />
+                            <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="education">Word No.</label>
+                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" {...register("word", { required: true })} />
+                        </div>
+                        <div className="pb-4">
+                            <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="education">Facebook</label>
+                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" {...register("facebook", { required: true })} />
                         </div>
                         <div className='pb-4'>
-                            <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="linkedin">Facebook Link</label>
-                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" name="facebook" id="facebook" />
-                        </div>
-                        <div className="pb-4">
-                            <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="img">Image Link</label>
-                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" name="img" id="img" />
+                            <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="education">Upload Image</label>
+                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="file" {...register("image", { required: true })} />
                         </div>
                         <div className='flex items-start justify-center'>
                             <button type="submit" className='btn'>Update Profile</button>
