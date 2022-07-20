@@ -15,9 +15,10 @@ const Dashboard = () => {
                         <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium' to='/dashboard'>My Profile</Link></li>
                         <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/blogs'>Blogs</Link></li>
                         <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/problems'>Problems</Link></li>
+                        <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/studentNotice'>Notices</Link></li>
+                        <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/studentSuggestion'>Suggestions</Link></li>
                         <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/addBlogs'>Add Blogs</Link></li>
                         <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/addProblems'>Add Problems</Link></li>
-                        <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/studentNotice'>Notices</Link></li>
                     </ul>
                 </div>
             </div>

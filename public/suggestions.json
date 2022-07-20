@@ -1,0 +1,24 @@
+[
+    {
+        "id": "01",
+        "date": "24th",
+        "month": "July",
+        "year": "2022",
+        "author": "Mr.Hasibul Alam",
+        "grade": "08",
+        "subject": "Math",
+        "details": "You should focus on this very closely. It's very important for your next exam.",
+        "img": "https://i.ibb.co/kx0Kwfd/JSC-Math-Model-Question.png"
+    },
+    {
+        "id": "02",
+        "date": "24th",
+        "month": "July",
+        "year": "2022",
+        "author": "Mr.Hasibul Alam",
+        "grade": "08",
+        "subject": "Math",
+        "details": "You should focus on this very closely. It's very important for your next exam.",
+        "img": "https://i.ibb.co/kx0Kwfd/JSC-Math-Model-Question.png"
+    }
+]

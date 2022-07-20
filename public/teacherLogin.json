@@ -2,51 +2,51 @@
     {
         "id": "1",
         "teacher": "01",
-        "password": "samiul"
+        "password": "ramiul"
     },
     {
         "id": "2",
         "teacher": "02",
-        "password": "tamim"
+        "password": "samim"
     },
     {
         "id": "3",
         "teacher": "03",
-        "password": "sakib"
+        "password": "akib"
     },
     {
         "id": "4",
         "teacher": "04",
-        "password": "rahim"
+        "password": "mahim"
     },
     {
         "id": "5",
         "teacher": "05",
-        "password": "khaled"
+        "password": "haled"
     },
     {
         "id": "6",
         "teacher": "06",
-        "password": "jabed"
+        "password": "abed"
     },
     {
         "id": "7",
         "teacher": "07",
-        "password": "jiku"
+        "password": "riku"
     },
     {
         "id": "8",
         "teacher": "08",
-        "password": "aftab"
+        "password": "aftar"
     },
     {
         "id": "9",
         "teacher": "09",
-        "password": "belal"
+        "password": "bilal"
     },
     {
         "id": "10",
         "teacher": "010",
-        "password": "jaber"
+        "password": "saber"
     }
 ]
