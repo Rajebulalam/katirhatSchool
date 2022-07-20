@@ -16,7 +16,7 @@ const Dashboard = () => {
                         <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/blogs'>Blogs</Link></li>
                         <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/problems'>Problems</Link></li>
                         <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/addBlogs'>Add Blogs</Link></li>
-                        <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/'>Add Problems</Link></li>
+                        <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/addProblems'>Add Problems</Link></li>
                         <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/'>Notices</Link></li>
                     </ul>
 

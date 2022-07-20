@@ -18,7 +18,7 @@ const Profile = ({ user }) => {
             <p style={{ fontFamily: 'Merienda' }} className='text-white pt-2'>Village : {village} </p>
             <p style={{ fontFamily: 'Merienda' }} className='text-white pt-2'>Bari : {bari} </p>
             <p style={{ fontFamily: 'Merienda' }} className='text-white pt-2'>Word : {word} </p>
-            <ExternalLink style={{ fontFamily: 'Merienda' }} className='text-white pt-2' blank href='https://www.facebook.com/rajebulalam.khokan/'>Facebook link : {facebook} </ExternalLink>
+            <ExternalLink style={{ fontFamily: 'Merienda' }} className='text-white pt-2' href='https://www.facebook.com/rajebulalam.khokan/'>Facebook link : {facebook} </ExternalLink>
         </div>
     );
 };

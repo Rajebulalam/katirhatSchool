@@ -6,7 +6,6 @@ const AddBlogs = () => {
     const addStudentBlogs = event => {
         event.preventDefault();
         const date = event.target.date.value;
-        // const image = event.target.image.value;
         const month = event.target.month.value;
         const year = event.target.year.value;
         const author = event.target.author.value;
@@ -14,7 +13,6 @@ const AddBlogs = () => {
         const description = event.target.description.value;
         const blog = {
             date,
-            // image,
             month,
             year,
             author,
@@ -66,10 +64,6 @@ const AddBlogs = () => {
                         <label style={{ fontFamily: 'Merienda' }} className='w-full md:w-3/12 font-bold text-white' htmlFor="education">Description</label>
                         <input className='w-full md:w-9/12 bg-slate-200 p-2 lg:max-w-lg rounded-sm' type="text" name="description" id="description" />
                     </div>
-                    {/* <div className="pb-4 block md:flex items-center mt-2">
-                        <label style={{ fontFamily: 'Merienda' }} className='w-full md:w-3/12 font-bold text-white' htmlFor="education">Upload Image</label>
-                        <input className='w-full md:w-9/12 bg-slate-200 p-2 lg:max-w-lg rounded-sm' type="file" name="image" id="image" />
-                    </div> */}
                     <div className='flex items-center justify-center'>
                         <button type="submit" className='btn bg-primary text-white'>Add Blog</button>
                     </div>

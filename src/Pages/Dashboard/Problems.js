@@ -17,7 +17,7 @@ const Problems = () => {
         <div>
             <h2 style={{ fontFamily: 'Merienda' }} className='text-2xl font-bold text-center py-3'>Our Problems</h2>
             {
-                problems.map(problem => <div className='bg-primary mb-4 rounded-sm p-4'>
+                problems.slice(0).reverse().map(problem => <div key={problem._id} className='bg-primary mb-4 rounded-sm p-4'>
                     <address className='text-white'>{problem.date}, {problem.month} {problem.year} </address>
                     <h2 style={{ fontFamily: 'Merienda' }} className='text-white text-xl'>Posted By : {problem.author}</h2>
                     <p className='text-white text-lg'>Class : {problem.grade}, Roll : {problem.roll}</p>
