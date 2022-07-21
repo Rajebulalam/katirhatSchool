@@ -17,6 +17,7 @@ const Students = () => {
     return (
         <div>
             <h2 style={{ fontFamily: 'Merienda' }} className='text-3xl font bold pb-6 text-center'>All of Our Students</h2>
+            <h3 style={{ fontFamily: 'Merienda' }} className='text-2xl pb-3'>Total Students: {students.length}</h3>
             {
                 students.map(student => <div key={student._id} className='w-full block md:flex shadow-xl bg-white rounded-md mb-12 p-12'>
                     <div className='w-full flex justify-center md:block md:w-4/12 mb-4 md:mb-0'>
@@ -30,8 +31,9 @@ const Students = () => {
                         <h3 style={{ fontFamily: 'Merienda' }} className='text-lg'><span className='text-xl font-semibold'>Village:</span> {student.village} </h3>
                         <h3 style={{ fontFamily: 'Merienda' }} className='text-lg'><span className='text-xl font-semibold'>Bari:</span> {student.bari} </h3>
                         <h3 style={{ fontFamily: 'Merienda' }} className='text-lg'><span className='text-xl font-semibold'>Word:</span> {student.word} </h3>
-                        <h3 style={{ fontFamily: 'Merienda' }} className='text-lg'><span className='text-xl font-semibold'>Mobile No:</span> {student.mobile} </h3>
+                        <h3 style={{ fontFamily: 'Merienda' }} className='text-lg'><span className='text-xl font-semibold'>Mobile No:</span> {student.phone} </h3>
                         <h3 style={{ fontFamily: 'Merienda' }} className='text-lg'><span className='text-xl font-semibold'>ID:</span> {student.student} </h3>
+                        <h3 style={{ fontFamily: 'Merienda' }} className='text-lg'><span className='text-xl font-semibold'>Password:</span> {student.password} </h3>
                         <ExternalLink style={{ fontFamily: 'Merienda' }} className='text-primary pt-2' href='https://www.facebook.com/rajebulalam.khokan/'>Facebook link : {student.facebook} </ExternalLink>
                     </div>
                 </div>

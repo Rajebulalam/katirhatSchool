@@ -46,6 +46,7 @@ import TeachersProfile from './Pages/Dashboard/TeachersProfile';
 import AddNotice from './Pages/Dashboard/AddNotice';
 import AddSuggestion from './Pages/Dashboard/AddSuggestion';
 import Students from './Pages/Dashboard/Students';
+import AddStudent from './Pages/Dashboard/AddStudent';
 
 function App() {
 
@@ -100,6 +101,7 @@ function App() {
           <Route path='addStudentNotice' element={<AddNotice></AddNotice>}></Route>
           <Route path='addSuggestion' element={<AddSuggestion></AddSuggestion>}></Route>
           <Route path='students' element={<Students></Students>}></Route>
+          <Route path='addStudent' element={<AddStudent></AddStudent>}></Route>
         </Route>
       </Routes>
       <Footer></Footer>

@@ -1,17 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { useQuery } from '@tanstack/react-query';
 
 const StudentLogin = () => {
 
-    // Student Login Loaded and Set
-    const [studentsLogin, setStudentsLogin] = useState([]);
-
-    useEffect(() => {
-        fetch('studentLogin.json')
-            .then(res => res.json())
-            .then(data => setStudentsLogin(data))
-    }, [])
+    const { data: studentsLogin, isLoading } = useQuery(['student'], () =>
+        fetch(`http://localhost:5000/allStudents`).then(
+            res => res.json()
+        )
+    )
 
     // Taken User Id from Input
     const [studentId, setStudentId] = useState('');
@@ -29,6 +27,10 @@ const StudentLogin = () => {
 
     const navigate = useNavigate();
 
+    if (isLoading) {
+        return 'Loading...';
+    }
+
     // Submit Taken Input
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -41,7 +43,7 @@ const StudentLogin = () => {
             localStorage.setItem('student', JSON.stringify(loginResult));
             navigate('/home');
             toast.success('Login Successfylly');
-            window.location.reload();
+            // window.location.reload();
         }
         else {
             toast.error('Login failed');
