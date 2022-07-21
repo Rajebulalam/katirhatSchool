@@ -2,6 +2,10 @@ import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
+
+    const student = localStorage.getItem('student');
+    const teacher = localStorage.getItem('teacher');
+
     return (
         <div>
             <div className="drawer drawer-mobile">
@@ -12,13 +16,22 @@ const Dashboard = () => {
                 <div style={{ borderRight: '7px solid #F9A825' }} className="drawer-side border-r-neutral">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                     <ul className="menu p-4 overflow-y-auto w-80 bg-slate-200 text-base-content">
-                        <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium' to='/dashboard'>My Profile</Link></li>
+                        {
+                            student && <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium' to='/dashboard'>My Profile</Link></li>
+                        }
+                        {
+                            teacher && <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium' to='/dashboard'>My Profile</Link></li>
+                        }
                         <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/blogs'>Blogs</Link></li>
                         <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/problems'>Problems</Link></li>
                         <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/studentNotice'>Notices</Link></li>
                         <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/studentSuggestion'>Suggestions</Link></li>
-                        <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/addBlogs'>Add Blogs</Link></li>
-                        <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/addProblems'>Add Problems</Link></li>
+                        {
+                            student && <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/addBlogs'>Add Blogs</Link></li>
+                        }
+                        {
+                            student && <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/addProblems'>Add Problems</Link></li>
+                        }
                     </ul>
                 </div>
             </div>

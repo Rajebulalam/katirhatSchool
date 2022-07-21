@@ -42,8 +42,13 @@ import AddBlogs from './Pages/Dashboard/AddBlogs';
 import AddProblems from './Pages/Dashboard/AddProblems';
 import StudentNotice from './Pages/Dashboard/StudentNotice';
 import Suggestions from './Pages/Dashboard/Suggestions';
+import TeachersProfile from './Pages/Dashboard/TeachersProfile';
 
 function App() {
+
+  const student = localStorage.getItem('student');
+  const teacher = localStorage.getItem('teacher');
+
   return (
     <div>
       <Header></Header>
@@ -77,7 +82,12 @@ function App() {
         <Route path='/studentLogin' element={<StudentLogin></StudentLogin>}></Route>
         <Route path='/teacherLogin' element={<TeacherLogin></TeacherLogin>}></Route>
         <Route path='dashboard' element={<Dashboard></Dashboard>}>
-          <Route index element={<MyProfile></MyProfile>}></Route>
+          {
+            student && <Route index element={<MyProfile></MyProfile>}></Route>
+          }
+          {
+            teacher && <Route index element={<TeachersProfile></TeachersProfile>}></Route>
+          }
           <Route path='blogs' element={<Blogs></Blogs>}></Route>
           <Route path='problems' element={<Problems></Problems>}></Route>
           <Route path='addBlogs' element={<AddBlogs></AddBlogs>}></Route>

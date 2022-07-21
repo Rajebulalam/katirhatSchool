@@ -1,17 +1,17 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
-import Profile from './Profile';
 import { toast } from 'react-toastify';
 import { useForm } from 'react-hook-form';
+import TeacherProfile from './TeacherProfile';
 
-const MyProfile = () => {
+const TeachersProfile = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-    const students = JSON.parse(localStorage.getItem("student"));
+    const teachers = JSON.parse(localStorage.getItem("teacher"));
 
     const { data: users, isLoading, refetch } = useQuery(['singleUsers'], () =>
-        fetch(`http://localhost:5000/students?student=${students?.student}`).then(
+        fetch(`http://localhost:5000/teachers?teacher=${teachers?.teacher}`).then(
             res => res.json()
         )
     )
@@ -20,8 +20,8 @@ const MyProfile = () => {
         return 'loading....';
     }
 
-    const studentId = students?.student;
-    const studentPass = students?.password;
+    const teacherId = teachers?.teacher;
+    const teacherPass = teachers?.password;
 
     const imageStorageKey = 'eb758106d1c4650d8ab4d6a4ff0243a9';
 
@@ -40,8 +40,8 @@ const MyProfile = () => {
                     const img = result.data.url;
                     const update = {
                         name: data.name,
-                        grade: data.grade,
-                        roll: data.roll,
+                        designation: data.designation,
+                        join: data.join,
                         phone: data.phone,
                         city: data.city,
                         village: data.village,
@@ -52,7 +52,7 @@ const MyProfile = () => {
                     }
 
                     // Send to the data base
-                    fetch(`http://localhost:5000/students/${studentId}`, {
+                    fetch(`http://localhost:5000/teachers/${teacherId}`, {
                         method: 'PUT',
                         headers: {
                             'content-type': 'application/json'
@@ -73,13 +73,13 @@ const MyProfile = () => {
             <div className='w-full lg:w-6/12 p-4 bg-primary rounded-sm mb-3 lg:mb-0 mr-0 lg:mr-2'>
                 <h2 style={{ fontFamily: 'Merienda' }} className='text-center text-3xl font-bold text-neutral py-3'>My Profile</h2>
                 <div className='text-center'>
-                    <p style={{ fontFamily: 'Merienda' }} className='text-xl font-bold text-white'> Student Id: {studentId} </p>
-                    <p style={{ fontFamily: 'Merienda' }} className='text-xl text-white font-medium'>Student Password: {studentPass} </p>
+                    <p style={{ fontFamily: 'Merienda' }} className='text-xl font-bold text-white'> Teacher Id: {teacherId} </p>
+                    <p style={{ fontFamily: 'Merienda' }} className='text-xl text-white font-medium'>Teacher Password: {teacherPass} </p>
                     {
-                        users?.map(user => <Profile
+                        users?.map(user => <TeacherProfile
                             key={user._id}
                             user={user}
-                        ></Profile>)
+                        ></TeacherProfile>)
                     }
                 </div>
             </div>
@@ -92,12 +92,12 @@ const MyProfile = () => {
                             <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" {...register("name", { required: true })} />
                         </div>
                         <div className="pb-4">
-                            <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="education">Grade</label>
-                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" {...register("grade", { required: true })} />
+                            <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="education">Designation</label>
+                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" {...register("designation", { required: true })} />
                         </div>
                         <div className="pb-4">
-                            <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="education">Roll</label>
-                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" {...register("roll", { required: true })} />
+                            <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="education">Joining Date</label>
+                            <input className='bg-slate-200 p-2 w-full lg:max-w-lg rounded-sm' type="text" {...register("join", { required: true })} />
                         </div>
                         <div className="pb-4">
                             <label style={{ fontFamily: 'Merienda' }} className='font-bold text-white' htmlFor="education">Phone</label>
@@ -137,4 +137,4 @@ const MyProfile = () => {
     );
 };
 
-export default MyProfile;
+export default TeachersProfile;
