@@ -9,9 +9,11 @@ const MainHeader = () => {
     const navigate = useNavigate();
 
     const student = localStorage.getItem('student');
+    const teacher = localStorage.getItem('teacher');
 
     const logOut = async () => {
         localStorage.removeItem('student');
+        localStorage.removeItem('teacher');
         navigate('/home');
         toast.success('Log out successfully');
     }
@@ -74,7 +76,10 @@ const MainHeader = () => {
             student === null ? ' ' : <li><Link className='text-white font-semibold hover:text-neutral' to='/dashboard'>Dashboard</Link></li>
         }
         {
-            student ? <button onClick={logOut} className="btn btn-outline w-[110px] mx-1 sm:mt-2 text-white lg:mt-[-1px]"><Link to='/home'>Log Out</Link></button> : <li tabIndex="0">
+            teacher === null ? ' ' : <li><Link className='text-white font-semibold hover:text-neutral' to='/dashboard'>Dashboard</Link></li>
+        }
+        {
+            teacher || student ? <button onClick={logOut} className="btn btn-outline w-[110px] mx-1 sm:mt-2 text-white lg:mt-[-1px]"><Link to='/home'>Log Out</Link></button> : <li tabIndex="0">
                 <Link className='text-white font-semibold hover:text-neutral' to='/'>
                     Login
                     <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>

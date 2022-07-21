@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const TeacherLogin = () => {
 
@@ -25,6 +27,9 @@ const TeacherLogin = () => {
         console.log(event.target.value);
     }
 
+    // Navigate
+    const navigate = useNavigate();
+
     // Submit Taken Input
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -34,10 +39,13 @@ const TeacherLogin = () => {
         console.log(loginResult);
 
         if (loginResult) {
-            console.log('Match The Id For');
+            localStorage.setItem('teacher', JSON.stringify(loginResult));
+            navigate('/home');
+            toast.success('Login Successfylly');
+            window.location.reload();
         }
         else {
-            console.log('Does not Match');
+            toast.error('Login failed');
         }
         event.target.reset();
     }
