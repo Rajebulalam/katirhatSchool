@@ -47,11 +47,13 @@ import AddNotice from './Pages/Dashboard/AddNotice';
 import AddSuggestion from './Pages/Dashboard/AddSuggestion';
 import Students from './Pages/Dashboard/Students';
 import AddStudent from './Pages/Dashboard/AddStudent';
+import AdminLogin from './Pages/Login/AdminLogin';
 
 function App() {
 
   const student = localStorage.getItem('student');
   const teacher = localStorage.getItem('teacher');
+  const admin = localStorage.getItem('admin');
 
   return (
     <div>
@@ -85,12 +87,16 @@ function App() {
         <Route path='/contact' element={<Contact></Contact>}></Route>
         <Route path='/studentLogin' element={<StudentLogin></StudentLogin>}></Route>
         <Route path='/teacherLogin' element={<TeacherLogin></TeacherLogin>}></Route>
+        <Route path='/admin' element={<AdminLogin></AdminLogin>}></Route>
         <Route path='dashboard' element={<Dashboard></Dashboard>}>
           {
             student && <Route index element={<MyProfile></MyProfile>}></Route>
           }
           {
             teacher && <Route index element={<TeachersProfile></TeachersProfile>}></Route>
+          }
+          {
+            admin && <Route index element={<TeachersProfile></TeachersProfile>}></Route>
           }
           <Route path='blogs' element={<Blogs></Blogs>}></Route>
           <Route path='problems' element={<Problems></Problems>}></Route>

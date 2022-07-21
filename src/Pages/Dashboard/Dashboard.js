@@ -5,6 +5,7 @@ const Dashboard = () => {
 
     const student = localStorage.getItem('student');
     const teacher = localStorage.getItem('teacher');
+    const admin = localStorage.getItem('admin');
 
     return (
         <div>
@@ -23,7 +24,13 @@ const Dashboard = () => {
                             teacher && <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium' to='/dashboard'>My Profile</Link></li>
                         }
                         {
+                            admin && <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium' to='/dashboard'>My Profile</Link></li>
+                        }
+                        {
                             teacher && <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/students'>Students</Link></li>
+                        }
+                        {
+                            admin && <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/students'>Students</Link></li>
                         }
                         <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/blogs'>Students Blog</Link></li>
                         <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/problems'>Students Problem</Link></li>

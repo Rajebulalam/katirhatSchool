@@ -1,17 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 const TeacherLogin = () => {
 
-    // Teachers Login Loaded and Set
-    const [teachersLogin, setTeachersLogin] = useState([]);
-
-    useEffect(() => {
-        fetch('teacherLogin.json')
-            .then(res => res.json())
-            .then(data => setTeachersLogin(data))
-    }, [])
+    // Teacher Login Load
+    const { data: educator, isLoading } = useQuery(['teacher'], () =>
+        fetch(`http://localhost:5000/teachers`).then(
+            res => res.json()
+        )
+    )
 
     // Taken User Id from Input
     const [teacherId, setTeacherId] = useState('');
@@ -30,19 +29,24 @@ const TeacherLogin = () => {
     // Navigate
     const navigate = useNavigate();
 
+    // Loading
+    if (isLoading) {
+        return 'Loading...';
+    }
+
     // Submit Taken Input
     const handleSubmit = async (event) => {
         event.preventDefault();
 
         // Find Id with Users Input
-        const loginResult = teachersLogin.find(teachers => teachers.teacher === teacherId && teachers.password === teacherPass);
+        const loginResult = educator.find(teachers => teachers.teacher === teacherId && teachers.password === teacherPass);
         console.log(loginResult);
 
         if (loginResult) {
             localStorage.setItem('teacher', JSON.stringify(loginResult));
             navigate('/home');
             toast.success('Login Successfylly');
-            window.location.reload();
+            // window.location.reload();
         }
         else {
             toast.error('Login failed');
