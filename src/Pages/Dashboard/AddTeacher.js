@@ -2,7 +2,7 @@ import React from 'react';
 import { toast } from 'react-toastify';
 import { useForm } from "react-hook-form";
 
-const AddStudent = () => {
+const AddTeacher = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
@@ -13,7 +13,7 @@ const AddStudent = () => {
         }
 
         // Send to the data base
-        fetch('http://localhost:5000/students', {
+        fetch('http://localhost:5000/addTeachers', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -29,19 +29,19 @@ const AddStudent = () => {
 
     return (
         <div>
-            <h2 style={{ fontFamily: 'Merienda' }} className='text-3xl font bold pb-6 text-center'>Add Student</h2>
+            <h2 style={{ fontFamily: 'Merienda' }} className='text-3xl font bold pb-6 text-center'>Add Teacher</h2>
             <div className='bg-primary p-5 py-8 rounded w-full md:w-8/12 mx-auto'>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="pb-4 block md:flex items-center">
-                        <label style={{ fontFamily: 'Merienda' }} className='w-full md:w-3/12 font-bold text-white' htmlFor="education">Student Id</label>
+                        <label style={{ fontFamily: 'Merienda' }} className='w-full md:w-3/12 font-bold text-white' htmlFor="education">Teacher Id</label>
                         <input className='w-full md:w-9/12 bg-slate-200 p-2 lg:max-w-lg rounded-sm' type="text" {...register("student", { required: true })} />
                     </div>
                     <div className="pb-4 block md:flex items-center">
-                        <label style={{ fontFamily: 'Merienda' }} className='w-full md:w-3/12 font-bold text-white' htmlFor="education">Student Password</label>
+                        <label style={{ fontFamily: 'Merienda' }} className='w-full md:w-3/12 font-bold text-white' htmlFor="education">Teacher Password</label>
                         <input className='w-full md:w-9/12 bg-slate-200 p-2 lg:max-w-lg rounded-sm' type="text" {...register("password", { required: true })} />
                     </div>
                     <div className='flex items-center justify-center'>
-                        <button type="submit" className='btn bg-primary text-white'>Add Student</button>
+                        <button type="submit" className='btn bg-primary text-white'>Add Teacher</button>
                     </div>
                 </form>
             </div>
@@ -49,4 +49,4 @@ const AddStudent = () => {
     );
 };
 
-export default AddStudent;
+export default AddTeacher;
