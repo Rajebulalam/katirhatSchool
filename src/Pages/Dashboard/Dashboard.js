@@ -22,6 +22,9 @@ const Dashboard = () => {
                         {
                             teacher && <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium' to='/dashboard'>My Profile</Link></li>
                         }
+                        {
+                            teacher && <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/students'>Students</Link></li>
+                        }
                         <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/blogs'>Blogs</Link></li>
                         <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/problems'>Problems</Link></li>
                         <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/studentNotice'>Notices</Link></li>
