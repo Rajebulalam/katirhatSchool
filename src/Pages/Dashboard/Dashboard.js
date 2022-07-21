@@ -35,6 +35,9 @@ const Dashboard = () => {
                         {
                             teacher && <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/addStudentNotice'>Add Notice</Link></li>
                         }
+                        {
+                            teacher && <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/addSuggestion'>Add Suggestion</Link></li>
+                        }
                     </ul>
                 </div>
             </div>
