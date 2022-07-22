@@ -4,8 +4,8 @@ import { ExternalLink } from 'react-external-link';
 
 const Students = () => {
 
-    const { data: students, isLoading, refetch } = useQuery(['singleProblems'], () =>
-        fetch(`http://localhost:5000/allStudents`).then(
+    const { data: students, isLoading } = useQuery(['singleProblems'], () =>
+        fetch(`https://still-sea-84749.herokuapp.com/allStudents`).then(
             res => res.json()
         )
     )

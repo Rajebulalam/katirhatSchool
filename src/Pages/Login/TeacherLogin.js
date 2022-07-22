@@ -7,7 +7,7 @@ const TeacherLogin = () => {
 
     // Teacher Login Load
     const { data: educator, isLoading } = useQuery(['teacher'], () =>
-        fetch(`http://localhost:5000/teachers`).then(
+        fetch(`https://still-sea-84749.herokuapp.com/teachers`).then(
             res => res.json()
         )
     )

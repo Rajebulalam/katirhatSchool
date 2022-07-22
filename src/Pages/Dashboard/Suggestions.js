@@ -3,8 +3,8 @@ import { useQuery } from '@tanstack/react-query';
 
 const Suggestions = () => {
 
-    const { data: suggestions, isLoading, refetch } = useQuery(['singleSuggestion'], () =>
-        fetch(`http://localhost:5000/studentSuggestion`).then(
+    const { data: suggestions, isLoading } = useQuery(['singleSuggestion'], () =>
+        fetch(`https://still-sea-84749.herokuapp.com/studentSuggestion`).then(
             res => res.json()
         )
     )

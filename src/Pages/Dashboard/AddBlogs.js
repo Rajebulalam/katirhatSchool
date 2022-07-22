@@ -20,7 +20,7 @@ const AddBlogs = () => {
             description
         };
 
-        fetch('http://localhost:5000/studentsBlogs', {
+        fetch('https://still-sea-84749.herokuapp.com/studentsBlogs', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

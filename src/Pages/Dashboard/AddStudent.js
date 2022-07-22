@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 
 const AddStudent = () => {
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit } = useForm();
 
     const onSubmit = async data => {
         const add = {
@@ -13,7 +13,7 @@ const AddStudent = () => {
         }
 
         // Send to the data base
-        fetch('http://localhost:5000/students', {
+        fetch('https://still-sea-84749.herokuapp.com/students', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

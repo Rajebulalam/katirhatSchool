@@ -6,8 +6,8 @@ import { toast } from 'react-toastify';
 const AdminLogin = () => {
 
     // Admin Login Load
-    const { data: admins, isLoading } = useQuery(['admin'], () =>
-        fetch(`http://localhost:5000/admin`).then(
+    const { data: admins, isLoading, formate: {error} } = useQuery(['admin'], () =>
+        fetch(`https://still-sea-84749.herokuapp.com/admin`).then(
             res => res.json()
         )
     )

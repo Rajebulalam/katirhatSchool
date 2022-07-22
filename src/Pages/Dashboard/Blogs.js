@@ -3,8 +3,8 @@ import { useQuery } from '@tanstack/react-query';
 
 const Blogs = () => {
 
-    const { data: blogs, isLoading, refetch } = useQuery(['singleBlog'], () =>
-        fetch(`http://localhost:5000/studentsBlogs`).then(
+    const { data: blogs, isLoading } = useQuery(['singleBlog'], () =>
+        fetch(`https://still-sea-84749.herokuapp.com/studentsBlogs`).then(
             res => res.json()
         )
     )

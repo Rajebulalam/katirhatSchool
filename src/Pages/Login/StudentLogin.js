@@ -6,7 +6,7 @@ import { useQuery } from '@tanstack/react-query';
 const StudentLogin = () => {
 
     const { data: studentsLogin, isLoading } = useQuery(['student'], () =>
-        fetch(`http://localhost:5000/allStudents`).then(
+        fetch(`https://still-sea-84749.herokuapp.com/allStudents`).then(
             res => res.json()
         )
     )

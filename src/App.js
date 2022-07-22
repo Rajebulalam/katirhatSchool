@@ -49,6 +49,7 @@ import Students from './Pages/Dashboard/Students';
 import AddStudent from './Pages/Dashboard/AddStudent';
 import AdminLogin from './Pages/Login/AdminLogin';
 import AddTeacher from './Pages/Dashboard/AddTeacher';
+import NotFound from './Pages/NotFound';
 
 function App() {
 
@@ -111,6 +112,7 @@ function App() {
           <Route path='addStudent' element={<AddStudent></AddStudent>}></Route>
           <Route path='addTeacher' element={<AddTeacher></AddTeacher>}></Route>
         </Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer />

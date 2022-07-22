@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 
 const AddSuggestion = () => {
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit } = useForm();
 
     const imageStorageKey = 'eb758106d1c4650d8ab4d6a4ff0243a9';
 
@@ -34,7 +34,7 @@ const AddSuggestion = () => {
                     }
 
                     // Send to the data base
-                    fetch('http://localhost:5000/studentSuggestion', {
+                    fetch('https://still-sea-84749.herokuapp.com/studentSuggestion', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'

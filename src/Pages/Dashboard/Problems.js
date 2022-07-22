@@ -4,11 +4,11 @@ import { useForm } from "react-hook-form";
 
 const Problems = () => {
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit } = useForm();
     const [details, setDetails] = useState('');
 
-    const { data: problems, isLoading, refetch } = useQuery(['singleProblems'], () =>
-        fetch(`http://localhost:5000/studentsProblems`).then(
+    const { data: problems, isLoading } = useQuery(['singleProblems'], () =>
+        fetch(`https://still-sea-84749.herokuapp.com/studentsProblems`).then(
             res => res.json()
         )
     )

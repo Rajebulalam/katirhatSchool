@@ -6,12 +6,12 @@ import TeacherProfile from './TeacherProfile';
 
 const TeachersProfile = () => {
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit } = useForm();
 
     const teachers = JSON.parse(localStorage.getItem("teacher"));
 
     const { data: users, isLoading, refetch } = useQuery(['singleUsers'], () =>
-        fetch(`http://localhost:5000/teachers?teacher=${teachers?.teacher}`).then(
+        fetch(`https://still-sea-84749.herokuapp.com/teachers?teacher=${teachers?.teacher}`).then(
             res => res.json()
         )
     )
@@ -52,7 +52,7 @@ const TeachersProfile = () => {
                     }
 
                     // Send to the data base
-                    fetch(`http://localhost:5000/teachers/${teacherId}`, {
+                    fetch(`https://still-sea-84749.herokuapp.com/teachers/${teacherId}`, {
                         method: 'PUT',
                         headers: {
                             'content-type': 'application/json'

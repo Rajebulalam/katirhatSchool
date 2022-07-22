@@ -6,12 +6,12 @@ import { useForm } from 'react-hook-form';
 
 const MyProfile = () => {
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit } = useForm();
 
     const students = JSON.parse(localStorage.getItem("student"));
 
     const { data: users, isLoading, refetch } = useQuery(['singleUsers'], () =>
-        fetch(`http://localhost:5000/students?student=${students?.student}`).then(
+        fetch(`https://still-sea-84749.herokuapp.com/students?student=${students?.student}`).then(
             res => res.json()
         )
     )
@@ -52,7 +52,7 @@ const MyProfile = () => {
                     }
 
                     // Send to the data base
-                    fetch(`http://localhost:5000/students/${studentId}`, {
+                    fetch(`https://still-sea-84749.herokuapp.com/students/${studentId}`, {
                         method: 'PUT',
                         headers: {
                             'content-type': 'application/json'
