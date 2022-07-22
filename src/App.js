@@ -50,6 +50,7 @@ import AddStudent from './Pages/Dashboard/AddStudent';
 import AdminLogin from './Pages/Login/AdminLogin';
 import AddTeacher from './Pages/Dashboard/AddTeacher';
 import NotFound from './Pages/NotFound';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 function App() {
 

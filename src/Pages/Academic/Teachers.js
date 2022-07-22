@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useQuery } from '@tanstack/react-query';
 import { ExternalLink } from 'react-external-link';
+import Loading from '../../Shared/Loading/Loading';
 
 const Teachers = () => {
 
@@ -12,7 +13,7 @@ const Teachers = () => {
     )
 
     if (isLoading) {
-        return 'Loading...';
+        return <Loading></Loading>;
     }
 
     return (

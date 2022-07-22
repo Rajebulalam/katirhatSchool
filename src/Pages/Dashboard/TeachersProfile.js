@@ -3,6 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { toast } from 'react-toastify';
 import { useForm } from 'react-hook-form';
 import TeacherProfile from './TeacherProfile';
+import Loading from '../../Shared/Loading/Loading';
 
 const TeachersProfile = () => {
 
@@ -17,7 +18,7 @@ const TeachersProfile = () => {
     )
 
     if (isLoading || null) {
-        return 'loading....';
+        return <Loading></Loading>;
     }
 
     const teacherId = teachers?.teacher;

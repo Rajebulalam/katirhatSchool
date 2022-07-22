@@ -1,5 +1,6 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
+import Loading from '../../Shared/Loading/Loading';
 
 const Blogs = () => {
 
@@ -10,7 +11,7 @@ const Blogs = () => {
     )
 
     if (isLoading) {
-        return 'Loading...';
+        return <Loading></Loading>;
     }
 
     return (

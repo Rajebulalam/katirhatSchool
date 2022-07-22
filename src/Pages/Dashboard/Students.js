@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { ExternalLink } from 'react-external-link';
+import Loading from '../../Shared/Loading/Loading';
 
 const Students = () => {
 
@@ -11,7 +12,7 @@ const Students = () => {
     )
 
     if (isLoading) {
-        return 'Loading...';
+        return <Loading></Loading>;
     }
 
     return (

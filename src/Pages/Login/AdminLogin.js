@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import Loading from '../../Shared/Loading/Loading';
 
 const AdminLogin = () => {
 
@@ -31,7 +32,7 @@ const AdminLogin = () => {
 
     // Loading
     if (isLoading) {
-        return 'Loading...';
+        return <Loading></Loading>;
     }
 
     // Submit Taken Input

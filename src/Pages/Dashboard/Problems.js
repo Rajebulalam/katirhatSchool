@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useForm } from "react-hook-form";
+import Loading from '../../Shared/Loading/Loading';
 
 const Problems = () => {
 
@@ -14,7 +15,7 @@ const Problems = () => {
     )
 
     if (isLoading) {
-        return 'Loading...';
+        return <Loading></Loading>;
     }
 
     const onSubmit = async data => {

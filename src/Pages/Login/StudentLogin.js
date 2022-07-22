@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { useQuery } from '@tanstack/react-query';
+import Loading from '../../Shared/Loading/Loading';
 
 const StudentLogin = () => {
 
@@ -29,7 +30,7 @@ const StudentLogin = () => {
 
     // Loading
     if (isLoading) {
-        return 'Loading...';
+        return <Loading></Loading>;
     }
 
     // Submit Taken Input
