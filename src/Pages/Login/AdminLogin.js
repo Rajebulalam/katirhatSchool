@@ -7,7 +7,7 @@ import Loading from '../../Shared/Loading/Loading';
 const AdminLogin = () => {
 
     // Admin Login Load
-    const { data: admins, isLoading, formate: {error} } = useQuery(['admin'], () =>
+    const { data: admins, isLoading } = useQuery(['admin'], () =>
         fetch(`https://still-sea-84749.herokuapp.com/admin`).then(
             res => res.json()
         )
@@ -40,14 +40,14 @@ const AdminLogin = () => {
         event.preventDefault();
 
         // Find Id with Users Input
-        const loginResult = admins.find(adm => adm.admin === adminId && adm.password === adminPass);
+        const loginResult = admins?.find(adm => adm.admin === adminId && adm.password === adminPass);
         console.log(loginResult);
 
         if (loginResult) {
             localStorage.setItem('admin', JSON.stringify(loginResult));
             navigate('/home');
-            toast.success('Login Successfylly');
-            // window.location.reload();
+            toast.success('Login Successfully');
+            window.location.reload();
         }
         else {
             toast.error('Login failed');

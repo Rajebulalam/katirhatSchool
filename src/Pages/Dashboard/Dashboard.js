@@ -18,13 +18,13 @@ const Dashboard = () => {
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                     <ul className="menu p-4 overflow-y-auto w-80 bg-slate-200 text-base-content">
                         {
-                            student && <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium' to='/dashboard'>My Profile</Link></li>
+                            student ? <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium' to='/dashboard'>My Profile</Link></li> : ' '
                         }
                         {
-                            teacher && <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium' to='/dashboard'>My Profile</Link></li>
+                            teacher ? <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium' to='/dashboard'>My Profile</Link></li> : ' '
                         }
                         {
-                            admin && <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium' to='/dashboard'>My Profile</Link></li>
+                            admin ? <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium' to='/dashboard'>My Profile</Link></li> : ' '
                         }
                         {
                             teacher && <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/students'>Students</Link></li>

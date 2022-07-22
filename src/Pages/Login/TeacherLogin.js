@@ -7,8 +7,8 @@ import Loading from '../../Shared/Loading/Loading';
 const TeacherLogin = () => {
 
     // Teacher Login Load
-    const { data: educator, isLoading } = useQuery(['teacher'], () =>
-        fetch(`https://still-sea-84749.herokuapp.com/teachers`).then(
+    const { data: educator, isLoading } = useQuery(['teachers'], () =>
+        fetch(`https://still-sea-84749.herokuapp.com/allTeachers`).then(
             res => res.json()
         )
     )
@@ -40,14 +40,14 @@ const TeacherLogin = () => {
         event.preventDefault();
 
         // Find Id with Users Input
-        const loginResult = educator.find(teachers => teachers.teacher === teacherId && teachers.password === teacherPass);
+        const loginResult = educator?.find(teachers => teachers.teacher === teacherId && teachers.password === teacherPass);
         console.log(loginResult);
 
         if (loginResult) {
             localStorage.setItem('teacher', JSON.stringify(loginResult));
             navigate('/home');
-            toast.success('Login Successfylly');
-            // window.location.reload();
+            toast.success('Login Successfully');
+            window.location.reload();
         }
         else {
             toast.error('Login failed');

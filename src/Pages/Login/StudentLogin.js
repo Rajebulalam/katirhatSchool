@@ -38,14 +38,14 @@ const StudentLogin = () => {
         event.preventDefault();
 
         // Find Id with Users Input
-        const loginResult = studentsLogin.find(students => students.student === studentId && students.password === studentPass);
+        const loginResult = studentsLogin?.find(students => students.student === studentId && students.password === studentPass);
         console.log(loginResult);
 
         if (loginResult) {
             localStorage.setItem('student', JSON.stringify(loginResult));
             navigate('/home');
-            toast.success('Login Successfylly');
-            // window.location.reload();
+            toast.success('Login Successfully');
+            window.location.reload();
         }
         else {
             toast.error('Login failed');

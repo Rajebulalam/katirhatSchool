@@ -51,6 +51,7 @@ import AdminLogin from './Pages/Login/AdminLogin';
 import AddTeacher from './Pages/Dashboard/AddTeacher';
 import NotFound from './Pages/NotFound';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import AdminsProfile from './Pages/Dashboard/AdminsProfile';
 
 function App() {
 
@@ -99,7 +100,7 @@ function App() {
             teacher && <Route index element={<TeachersProfile></TeachersProfile>}></Route>
           }
           {
-            admin && <Route index element={<TeachersProfile></TeachersProfile>}></Route>
+            admin && <Route index element={<AdminsProfile></AdminsProfile>}></Route>
           }
           <Route path='blogs' element={<Blogs></Blogs>}></Route>
           <Route path='problems' element={<Problems></Problems>}></Route>

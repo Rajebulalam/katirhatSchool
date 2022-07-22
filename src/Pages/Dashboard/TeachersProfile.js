@@ -10,6 +10,7 @@ const TeachersProfile = () => {
     const { register, handleSubmit } = useForm();
 
     const teachers = JSON.parse(localStorage.getItem("teacher"));
+   
 
     const { data: users, isLoading, refetch } = useQuery(['singleUsers'], () =>
         fetch(`https://still-sea-84749.herokuapp.com/teachers?teacher=${teachers?.teacher}`).then(
@@ -17,7 +18,7 @@ const TeachersProfile = () => {
         )
     )
 
-    if (isLoading || null) {
+    if (isLoading) {
         return <Loading></Loading>;
     }
 
