@@ -54,6 +54,7 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import AdminsProfile from './Pages/Dashboard/AdminsProfile';
 import AddAdmin from './Pages/Dashboard/AddAdmin';
 import Admins from './Pages/Dashboard/Admins';
+import AddGeneralNotice from './Pages/Dashboard/AddGeneralNotice';
 
 function App() {
 
@@ -117,6 +118,7 @@ function App() {
           <Route path='addTeacher' element={<AddTeacher></AddTeacher>}></Route>
           <Route path='addAdmin' element={<AddAdmin></AddAdmin>}></Route>
           <Route path='admins' element={<Admins></Admins>}></Route>
+          <Route path='addGeneralNotice' element={<AddGeneralNotice></AddGeneralNotice>}></Route>
         </Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
