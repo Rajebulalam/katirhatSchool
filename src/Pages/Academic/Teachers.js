@@ -22,7 +22,7 @@ const Teachers = () => {
                 <title>Katirhat High School - Teachers</title>
             </Helmet>
             <h2 style={{ fontFamily: 'Merienda' }} className='text-3xl font bold pb-6 text-center'>All of Our Teachers</h2>
-            <h3 style={{ fontFamily: 'Merienda' }} className='text-2xl pb-3'>Total Students: {teachers.length}</h3>
+            <h3 style={{ fontFamily: 'Merienda' }} className='text-2xl pb-3'>Total Teacher: {teachers.length}</h3>
             {
                 teachers.map(teacher => <div key={teacher._id} className='w-full block md:flex shadow-xl bg-primary rounded-md mb-12 p-12'>
                     <div className='w-full flex justify-center md:block md:w-4/12 mb-4 md:mb-0'>
@@ -37,7 +37,7 @@ const Teachers = () => {
                         <h3 style={{ fontFamily: 'Merienda' }} className='text-lg text-white'><span className='text-xl font-semibold text-white'>Word :</span> {teacher.word} </h3>
                         <h3 style={{ fontFamily: 'Merienda' }} className='text-lg text-white'><span className='text-xl font-semibold'>Joining Date :</span> {teacher.join} </h3>
                         <h3 style={{ fontFamily: 'Merienda' }} className='text-lg text-white'><span className='text-xl font-semibold'>Mobile No :</span> {teacher.phone} </h3>
-                        <ExternalLink style={{ fontFamily: 'Merienda' }} className='text-white pt-2' href='https://www.facebook.com/rajebulalam.khokan/'>Facebook link : {teachers.facebook} </ExternalLink>
+                        <ExternalLink style={{ fontFamily: 'Merienda' }} className='text-white pt-2' href='https://www.facebook.com/rajebulalam.khokan/'>Facebook link : {teacher.facebook} </ExternalLink>
                     </div>
                 </div>
                 )

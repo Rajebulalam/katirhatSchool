@@ -52,6 +52,8 @@ import AddTeacher from './Pages/Dashboard/AddTeacher';
 import NotFound from './Pages/NotFound';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import AdminsProfile from './Pages/Dashboard/AdminsProfile';
+import AddAdmin from './Pages/Dashboard/AddAdmin';
+import Admins from './Pages/Dashboard/Admins';
 
 function App() {
 
@@ -64,34 +66,34 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
-        <Route path='/home' element={<Home></Home>}></Route>
-        <Route path='/chairmanMessage' element={<ChairmanMessage></ChairmanMessage>}></Route>
-        <Route path='/principleMessage' element={<PrincipleMessage></PrincipleMessage>}></Route>
-        <Route path='/vicePrincipleMessage' element={<VicePrincipleMessage></VicePrincipleMessage>}></Route>
-        <Route path='/teacherMessage' element={<TeacherMessage></TeacherMessage>}></Route>
-        <Route path='/academicHour' element={<AcademicHour></AcademicHour>}></Route>
-        <Route path='/classRoutine' element={<ClassRoutine></ClassRoutine>}></Route>
-        <Route path='/extraCurricular' element={<ExtraCurriculumn></ExtraCurriculumn>}></Route>
-        <Route path='/syllabus' element={<Syllabus></Syllabus>}></Route>
-        <Route path='/teachers' element={<Teachers></Teachers>}></Route>
-        <Route path='/staff' element={<Staff></Staff>}></Route>
-        <Route path='/academicCalender' element={<AcademicCalender></AcademicCalender>}></Route>
-        <Route path='/library' element={<Library></Library>}></Route>
-        <Route path='/canteen' element={<Canteen></Canteen>}></Route>
-        <Route path='/guardian' element={<GuardianRoom></GuardianRoom>}></Route>
-        <Route path='/sport' element={<Sports></Sports>}></Route>
-        <Route path='/prayer' element={<PrayerRoom></PrayerRoom>}></Route>
-        <Route path='/notice' element={<Notices></Notices>}></Route>
-        <Route path='/images' element={<Images></Images>}></Route>
-        <Route path='/sportGallery' element={<SportGallery></SportGallery>}></Route>
-        <Route path='/video' element={<Videos></Videos>}></Route>
-        <Route path='/admissionInstruction' element={<AdmissionInstruction></AdmissionInstruction>}></Route>
-        <Route path='/onlineAdmission' element={<OnlineAdmission></OnlineAdmission>}></Route>
-        <Route path='/history' element={<About></About>}></Route>
-        <Route path='/contact' element={<Contact></Contact>}></Route>
-        <Route path='/studentLogin' element={<StudentLogin></StudentLogin>}></Route>
-        <Route path='/teacherLogin' element={<TeacherLogin></TeacherLogin>}></Route>
-        <Route path='/admin' element={<AdminLogin></AdminLogin>}></Route>
+        <Route path='home' element={<Home></Home>}></Route>
+        <Route path='chairmanMessage' element={<ChairmanMessage></ChairmanMessage>}></Route>
+        <Route path='principleMessage' element={<PrincipleMessage></PrincipleMessage>}></Route>
+        <Route path='vicePrincipleMessage' element={<VicePrincipleMessage></VicePrincipleMessage>}></Route>
+        <Route path='teacherMessage' element={<TeacherMessage></TeacherMessage>}></Route>
+        <Route path='academicHour' element={<AcademicHour></AcademicHour>}></Route>
+        <Route path='classRoutine' element={<ClassRoutine></ClassRoutine>}></Route>
+        <Route path='extraCurricular' element={<ExtraCurriculumn></ExtraCurriculumn>}></Route>
+        <Route path='syllabus' element={<Syllabus></Syllabus>}></Route>
+        <Route path='teachers' element={<Teachers></Teachers>}></Route>
+        <Route path='staff' element={<Staff></Staff>}></Route>
+        <Route path='academicCalender' element={<AcademicCalender></AcademicCalender>}></Route>
+        <Route path='library' element={<Library></Library>}></Route>
+        <Route path='canteen' element={<Canteen></Canteen>}></Route>
+        <Route path='guardian' element={<GuardianRoom></GuardianRoom>}></Route>
+        <Route path='sport' element={<Sports></Sports>}></Route>
+        <Route path='prayer' element={<PrayerRoom></PrayerRoom>}></Route>
+        <Route path='notice' element={<Notices></Notices>}></Route>
+        <Route path='images' element={<Images></Images>}></Route>
+        <Route path='sportGallery' element={<SportGallery></SportGallery>}></Route>
+        <Route path='video' element={<Videos></Videos>}></Route>
+        <Route path='admissionInstruction' element={<AdmissionInstruction></AdmissionInstruction>}></Route>
+        <Route path='onlineAdmission' element={<OnlineAdmission></OnlineAdmission>}></Route>
+        <Route path='history' element={<About></About>}></Route>
+        <Route path='contact' element={<Contact></Contact>}></Route>
+        <Route path='studentLogin' element={<StudentLogin></StudentLogin>}></Route>
+        <Route path='teacherLogin' element={<TeacherLogin></TeacherLogin>}></Route>
+        <Route path='admin' element={<AdminLogin></AdminLogin>}></Route>
         <Route path='dashboard' element={<Dashboard></Dashboard>}>
           {
             student && <Route index element={<MyProfile></MyProfile>}></Route>
@@ -113,6 +115,8 @@ function App() {
           <Route path='students' element={<Students></Students>}></Route>
           <Route path='addStudent' element={<AddStudent></AddStudent>}></Route>
           <Route path='addTeacher' element={<AddTeacher></AddTeacher>}></Route>
+          <Route path='addAdmin' element={<AddAdmin></AddAdmin>}></Route>
+          <Route path='admins' element={<Admins></Admins>}></Route>
         </Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>

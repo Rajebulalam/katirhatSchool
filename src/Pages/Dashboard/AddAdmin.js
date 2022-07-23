@@ -2,18 +2,20 @@ import React from 'react';
 import { toast } from 'react-toastify';
 import { useForm } from "react-hook-form";
 
-const AddTeacher = () => {
+const AddAdmin = () => {
+
+
 
     const { register, handleSubmit } = useForm();
 
     const onSubmit = async data => {
         const add = {
-            teacher: data.teacher,
+            admin: data.admin,
             password: data.password,
         }
 
         // Send to the data base
-        fetch('https://still-sea-84749.herokuapp.com/addTeachers', {
+        fetch('http://localhost:5000/addTeachers', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -22,7 +24,7 @@ const AddTeacher = () => {
         })
             .then(res => res.json())
             .then(data => {
-                toast.success('Student Added');
+                toast.success('Admin  Added');
                 console.log(data);
             })
     }
@@ -33,15 +35,15 @@ const AddTeacher = () => {
             <div className='bg-primary p-5 py-8 rounded w-full md:w-8/12 mx-auto'>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="pb-4 block md:flex items-center">
-                        <label style={{ fontFamily: 'Merienda' }} className='w-full md:w-3/12 font-bold text-white' htmlFor="education">Teacher Id</label>
-                        <input className='w-full md:w-9/12 bg-slate-200 p-2 lg:max-w-lg rounded-sm' type="text" {...register("teacher", { required: true })} />
+                        <label style={{ fontFamily: 'Merienda' }} className='w-full md:w-3/12 font-bold text-white' htmlFor="education">Admin Id</label>
+                        <input className='w-full md:w-9/12 bg-slate-200 p-2 lg:max-w-lg rounded-sm' type="text" {...register("admin", { required: true })} />
                     </div>
                     <div className="pb-4 block md:flex items-center">
-                        <label style={{ fontFamily: 'Merienda' }} className='w-full md:w-3/12 font-bold text-white' htmlFor="education">Teacher Password</label>
+                        <label style={{ fontFamily: 'Merienda' }} className='w-full md:w-3/12 font-bold text-white' htmlFor="education">Admin Password</label>
                         <input className='w-full md:w-9/12 bg-slate-200 p-2 lg:max-w-lg rounded-sm' type="text" {...register("password", { required: true })} />
                     </div>
                     <div className='flex items-center justify-center'>
-                        <button type="submit" className='btn bg-primary text-white'>Add Teacher</button>
+                        <button type="submit" className='btn bg-primary text-white'>Add Admin</button>
                     </div>
                 </form>
             </div>
@@ -49,4 +51,4 @@ const AddTeacher = () => {
     );
 };
 
-export default AddTeacher;
+export default AddAdmin;
