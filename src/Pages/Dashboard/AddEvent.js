@@ -31,7 +31,7 @@ const AddEvent = () => {
                     }
 
                     // Send to the data base
-                    fetch('http://localhost:5000/addEvent', {
+                    fetch('https://still-sea-84749.herokuapp.com/addEvent', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'

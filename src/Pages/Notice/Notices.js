@@ -6,7 +6,7 @@ import Loading from '../../Shared/Loading/Loading';
 const Notices = () => {
 
     const { data: notices, isLoading } = useQuery(['notice'], () =>
-        fetch(`http://localhost:5000/notices`).then(
+        fetch(`https://still-sea-84749.herokuapp.com/notices`).then(
             res => res.json()
         )
     )

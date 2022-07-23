@@ -7,7 +7,7 @@ import { Helmet } from 'react-helmet-async';
 const Admins = () => {
 
     const { data: admins, isLoading } = useQuery(['admin'], () =>
-        fetch(`http://localhost:5000/admin`).then(
+        fetch(`https://still-sea-84749.herokuapp.com/admin`).then(
             res => res.json()
         )
     )

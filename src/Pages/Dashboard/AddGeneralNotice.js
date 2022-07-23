@@ -30,7 +30,7 @@ const AddGeneralNotice = () => {
                     }
 
                     // Send to the data base
-                    fetch('http://localhost:5000/addNotice', {
+                    fetch('https://still-sea-84749.herokuapp.com/addNotice', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'
