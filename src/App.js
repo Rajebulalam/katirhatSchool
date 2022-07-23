@@ -55,6 +55,7 @@ import AdminsProfile from './Pages/Dashboard/AdminsProfile';
 import AddAdmin from './Pages/Dashboard/AddAdmin';
 import Admins from './Pages/Dashboard/Admins';
 import AddGeneralNotice from './Pages/Dashboard/AddGeneralNotice';
+import AddEvent from './Pages/Dashboard/AddEvent';
 
 function App() {
 
@@ -119,6 +120,7 @@ function App() {
           <Route path='addAdmin' element={<AddAdmin></AddAdmin>}></Route>
           <Route path='admins' element={<Admins></Admins>}></Route>
           <Route path='addGeneralNotice' element={<AddGeneralNotice></AddGeneralNotice>}></Route>
+          <Route path='addEvent' element={<AddEvent></AddEvent>}></Route>
         </Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>

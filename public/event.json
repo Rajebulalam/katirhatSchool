@@ -2,41 +2,46 @@
     {
         "id": "01",
         "name": "Study Tour",
+        "date": "5th",
+        "month": "July",
         "year": "2022",
-        "date": "5th July, 2022",
-        "posted": "Principle",
+        "author": "Principle",
         "img": "https://i.ibb.co/3CzqVgd/study.jpg"
     },
     {
         "id": "02",
         "name": "Annual Sports",
+        "date": "5th",
+        "month": "July",
         "year": "2022",
-        "date": "21st February, 2022",
-        "posted": "Principle",
+        "author": "Principle",
         "img": "https://i.ibb.co/kmnCjgt/Fifa-World-Cup-2010-Champions-Spain-31142-original.jpg"
     },
     {
         "id": "03",
         "name": "Debate Competition",
+        "date": "5th",
+        "month": "July",
         "year": "2022",
-        "date": "17th March, 2022",
-        "posted": "Principle",
+        "author": "Principle",
         "img": "https://i.ibb.co/SPDjyHT/Whats-App-Image-2022-02-12-at-6-27-56-AM.jpg"
     },
     {
         "id": "04",
         "name": "Tree Plantation",
+        "date": "5th",
+        "month": "July",
         "year": "2022",
-        "date": "1st June, 2022",
-        "posted": "Principle",
+        "author": "Principle",
         "img": "https://i.ibb.co/FDhxZhP/SAPLINGS.jpg"
     },
     {
         "id": "05",
         "name": "Science Fair",
+        "date": "5th",
+        "month": "July",
         "year": "2022",
-        "date": "5th December, 2022",
-        "posted": "Principle",
+        "author": "Principle",
         "img": "https://i.ibb.co/gvPc2nQ/GSF2019-Finalists-El7-Rg7o-max-1000x1000.pnghttps://i.ibb.co/3CzqVgd/study.jpg"
     }
 ]

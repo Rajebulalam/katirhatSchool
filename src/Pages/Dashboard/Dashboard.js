@@ -63,6 +63,9 @@ const Dashboard = () => {
                         {
                             admin && <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/addGeneralNotice'>Add Notice</Link></li>
                         }
+                        {
+                            admin && <li><Link className='bg-primary hover:bg-blue-900 text-white font-medium mt-2' to='/dashboard/addEvent'>Add Event</Link></li>
+                        }
                     </ul>
                 </div>
             </div>
