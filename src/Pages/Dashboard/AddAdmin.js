@@ -15,7 +15,7 @@ const AddAdmin = () => {
         }
 
         // Send to the data base
-        fetch('http://localhost:5000/addTeachers', {
+        fetch('http://localhost:5000/addAdmins', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

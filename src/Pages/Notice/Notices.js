@@ -1,13 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useQuery } from '@tanstack/react-query';
+import Loading from '../../Shared/Loading/Loading';
 
 const Notices = () => {
 
-    const [notices, setNotices] = useState([]);
+    const { data: notices, isLoading } = useQuery(['notice'], () =>
+        fetch(`http://localhost:5000/notices`).then(
+            res => res.json()
+        )
+    )
 
-    fetch('notice.json')
-        .then(res => res.json())
-        .then(data => setNotices(data))
+    if (isLoading) {
+        return <Loading></Loading>;
+    }
 
     return (
         <div className='w-full lg:w-11/12 px-4 lg:px-6 mx-auto py-12'>
@@ -17,7 +23,7 @@ const Notices = () => {
             <h2 style={{ fontFamily: 'Merienda' }} className='text-neutral text-3xl pb-8 text-center font-bold'>Notices</h2>
             <div>
                 {
-                    notices.map(notice => <div className='mb-6' key={notice.id}>
+                    notices?.slice(0).reverse().map(notice => <div className='mb-6' key={notice._id}>
                         <address className='text-lg'>{notice.date}, {notice.month} {notice.year}</address>
                         <h3 className='text-xl pb-4'>By <i>{notice.name}</i></h3>
                         <div className='border'>
